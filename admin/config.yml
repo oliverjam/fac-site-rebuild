@@ -152,18 +152,18 @@ collections:
                     fields:
                       - { label: Title, name: title, widget: string }
                       - { label: Body, name: body, widget: markdown }
-            - label: "Case Studies"
-              name: "caseStudies"
-              widget: "object"
-              fields:
-                - { label: Title, name: title, widget: string }
-                - label: "Apps"
-                  name: "apps"
-                  widget: "list"
-                  fields:
-                    - { label: Title, name: title, widget: string }
-                    - { label: Body, name: body, widget: markdown }
-                    - { label: URL, name: url, widget: string }
+          - label: "Case Studies"
+            name: "caseStudies"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: "Apps"
+                name: "apps"
+                widget: "list"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: markdown }
+                  - { label: URL, name: url, widget: string }
       - label: "Hire Page"
         name: "hire"
         file: "hire/hire.json"
