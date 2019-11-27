@@ -40,6 +40,38 @@ collections:
               - { label: Cohort, name: cohort, widget: string }
               - { label: Quote, name: quote, widget: string }
               - { label: Image, name: image, widget: image }
+      - label: "About Page"
+        name: "about"
+        file: "about/about.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: "FAQ Section"
+            name: "faqSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: "FAQs"
+                name: "faqs"
+                widget: "list"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: markdown }
+              - { label: Outro, name: outro, widget: markdown }
+          - label: "Team section"
+            name: "teamSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: markdown }
+              - label: "team"
+                name: "team"
+                widget: "list"
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Cohort, name: cohort, widget: string }
+                  - { label: Quote, name: quote, widget: string }
+                  - { label: Image, name: image, widget: image }
       - label: "Apply Page"
         name: "apply"
         file: "apply/apply.json"
