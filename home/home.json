@@ -1,4 +1,23 @@
 {
   "title": "We are Founders and Coders",
-  "body": "\n## Overview\n\nFounders and Coders CIC is a UK-based nonprofit that develops and runs tuition-free, peer-led training programmes in web development, guided by our core values of cooperation, inclusion and social impact. We operate in London and work with Mercy Corps and the UK government to deliver programmes in the Middle East."
+  "video": "/assets/media/home_page_video.mp4",
+  "intro": {
+    "title": "Overview",
+    "body": "Founders and Coders CIC is a UK-based nonprofit that develops and runs tuition-free, peer-led training programmes in web development, guided by our core values of cooperation, inclusion and social impact. We operate in London and work with Mercy Corps and the UK government to deliver programmes in the Middle East."
+  },
+  "coop": {
+    "title": "We proudly co-operate with",
+    "logos": [
+      "/assets/media/dwyl_grayscale.png",
+      "/assets/media/gaza_sky_geeks_grayscale.png"
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Amelie",
+      "cohort": "Summer 2017",
+      "quote": "Because Founders and Coders is founded on the idea of peer-led learning, it stimulates an environment of support and mutual growth, which results in what feels like a very special community: a safe, creative space, where no question is too silly to ask and no idea is too bold to suggest.",
+      "image": "/assets/media/amelie.png"
+    }
+  ]
 }
