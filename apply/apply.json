@@ -1,23 +1,25 @@
 {
   "title": "Apply to our course",
   "intro": "Our programme is designed for people who are serious about a career in web development, are comfortable with uncertainty, can take initiative, and believe strongly in the value of community and helping others.",
-  "cohorts": {
+  "cohortSection": {
     "title": "What you need to know",
-    "cohort": {
-      "name": "Winter 2019",
-      "dates": [
-        {
-          "title": "Expression of interest",
-          "open": "2019-05-01T15:30:13.631Z",
-          "close": "2019-07-01T15:30:13.667Z"
-        },
-        {
-          "title": "Application window",
-          "open": "2019-08-01T15:30:46.216Z",
-          "close": "2019-08-31T15:30:46.250Z"
-        }
-      ]
-    }
+    "cohorts": [
+      {
+        "name": "Winter 2019",
+        "dates": [
+          {
+            "title": "Expression of interest",
+            "open": "2019-05-01T15:30:13.631Z",
+            "close": "2019-07-01T15:30:13.667Z"
+          },
+          {
+            "title": "Application window",
+            "open": "2019-08-01T15:30:46.216Z",
+            "close": "2019-08-31T15:30:46.250Z"
+          }
+        ]
+      }
+    ]
   },
   "apply": {
     "title": "How do I apply?",
