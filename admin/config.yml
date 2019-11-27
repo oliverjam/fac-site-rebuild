@@ -14,7 +14,30 @@ collections:
         file: "home/home.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
+          - { label: Video, name: video, widget: file }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: text }
+              - { label: Body, name: body, widget: markdown }
+          - label: "Coop section"
+            name: "coop"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: text }
+              - label: "Coop logos"
+                name: "logos"
+                widget: "list"
+                field: { label: Logo, name: logo, widget: image }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Cohort, name: cohort, widget: string }
+              - { label: Quote, name: quote, widget: string }
+              - { label: Image, name: image, widget: image }
       #     - label: Team
       #       name: team
       #       widget: list
