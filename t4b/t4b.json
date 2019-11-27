@@ -1,0 +1,82 @@
+{
+  "title": "Tech for Better",
+  "intro": {
+    "title": "Your ideas can make the world a better place.",
+    "body": "A programme for social impact startups and nonprofits to learn how to design, build and test new digital services, working with developers in London and Palestine, and supported by [Intersticia](https://intersticia.org/). The only thing it will cost is your time."
+  },
+  "image": "/assets/media/t4b_splash.png",
+  "apply": {
+    "title": "How do I apply?",
+    "steps": [
+      {
+        "title": "Discovery workshop (2 hours)",
+        "body": "Start by defining your challenge, describing your users, and identifying their needs. Finish up by preparing a user survey, which you will conduct over the following week."
+      },
+      {
+        "title": "Definition workshop (2 hours)",
+        "body": "Recap the results of the user survey and redefine the problem, identify a specific user journey that addresses that problem, and begin the design process with some paper prototyping."
+      },
+      {
+        "title": "Product owner workshop (2 hours)",
+        "body": "Explore your role as a product owner and familiarise yourself with project management tools and the application development process. End by creating a series of user stories which can form the basis of your app."
+      },
+      {
+        "title": "Development (3-4 weeks)",
+        "body": "At this point, we are ready to schedule product development! A team of 2-4 developers will work with you to build a mobile web app that can be tested with users and form the basis of applications for further funding."
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "More information",
+    "faqs": [
+      {
+        "title": "How will this programme benefit me?",
+        "body": "You will gain experience working with a software development team and see your ideas take shape in digital form. By the end of the process you will have a working mobile web app that you can test with users."
+      },
+      {
+        "title": "What is the total time commitment required of me?",
+        "body": "After the initial workshops, around 20 hours over the one-month product development period, testing the app, giving feedback and meeting with the developers."
+      },
+      {
+        "title": "What if I want to continue development after the programme ends?",
+        "body": "The Tech for Better programme is primarily designed to develop your expertise in managing digital projects, to test out new ideas, and to build a case for approaching funders like [Comic Relief](https://www.comicrelief.com/), [Social Tech Trust](https://socialtechtrust.org/) and [Big Lottery Fund](https://www.biglotteryfund.org.uk/), but the apps we build are fully documented and open source. If you already have funding, we have a large community of freelance developers in both London and Palestine who can help."
+      },
+      {
+        "title": "Why are you running this programme?",
+        "body": "This programme provides an opportunity for our developers in both London and Palestine to gain experience, improve their employability, and work on projects that make a real difference to people’s lives."
+      },
+      {
+        "title": "What is a web app?",
+        "body": "A web app is a website that looks and feels like a mobile app. This means that users won’t have to download anything from an app store. Web apps can be accessed by anyone using a web browser on a computer, tablet, or smartphone."
+      },
+      {
+        "title": "What sorts of apps do you build?",
+        "body": "Three examples of previous projects are linked to below."
+      }
+    ]
+  },
+  "caseStudies": {
+    "title": "Case studies",
+    "apps": [
+      {
+        "title": "Breathe With Me (Anna Freud Centre, 2016)",
+        "body": "A web app that helps young people manage their anxiety built with input from young people and the clinical team at the [Anna Freud Centre](https://www.annafreud.org/).",
+        "url": "https://breathewithme.co.uk/"
+      },
+      {
+        "title": "Down to Earth (Quaker Social Action, CAST, 2016)",
+        "body": "A service that provides practical support for people struggling with funeral costs. During the [CAST Digital Fellowship](https://wearecast.org.uk/for-nonprofits/fellowship/), our developers built a funeral costs calculator which was shortlisted for the [2018 Comic Relief Tech for Good awards](https://www.comicrelief.com/news/tech-for-good-2018).",
+        "url": "https://quaker-social-action.github.io/dte-website/www/"
+      },
+      {
+        "title": "Little Window (CHAYN, 2018)",
+        "body": "A chatbot to help women who are victims of domestic abuse find information on the Chayn website relevant to their needs, funded by [Filament Consultancy Group](https://www.filament.ai/). Read about both [the client’s](https://medium.com/hack-for-chayn/were-trying-something-new-say-hello-to-little-window-our-chatbot-36a65ac44fda) and [the developers’](https://medium.com/hack-for-chayn/building-little-window-how-we-created-a-chatbot-for-chayn-682ecf7bd495) experience of the project.",
+        "url": "https://chayn.co/"
+      }
+    ]
+  },
+  "about": {
+    "title": "What is Founders and Coders and what do you do?",
+    "body": "Founders and Coders CIC is a UK-based nonprofit that develops and runs tuition-free training programmes in web development, guided by our core values of cooperation, inclusion and social impact. In 2017, [we partnered with MercyCorps to establish a campus in Gaza](https://www.theguardian.com/world/2018/jul/05/wireless-in-gaza-the-code-school-bringing-hope-to-the-strip), where youth unemployment is among the highest in the world. The Tech for Better programme provides a rare opportunity for our developers there to gain experience working on real projects with overseas clients."
+  }
+}

@@ -123,3 +123,55 @@ collections:
             name: "partners"
             widget: "list"
             field: { label: Logo, name: logo, widget: image }
+      - label: "T4B Page"
+        name: "t4b"
+        file: "t4b/t4b.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: Image, name: image, widget: image }
+          - label: "Apply Section"
+            name: "apply"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: markdown }
+              - label: "FAQ Section"
+                name: "faqSection"
+                widget: "object"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - label: "FAQs"
+                    name: "faqs"
+                    widget: "list"
+                    fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: Body, name: body, widget: markdown }
+            - label: "Case Studies"
+              name: "caseStudies"
+              widget: "object"
+              fields:
+                - { label: Title, name: title, widget: string }
+                - label: "Apps"
+                  name: "apps"
+                  widget: "list"
+                  fields:
+                    - { label: Title, name: title, widget: string }
+                    - { label: Body, name: body, widget: markdown }
+                    - { label: URL, name: url, widget: string }
+      - label: "Hire Page"
+        name: "hire"
+        file: "hire/hire.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: Image, name: image, widget: image }
+          - label: "Partner logos"
+            name: "partners"
+            widget: "list"
+            field: { label: Logo, name: logo, widget: image }
