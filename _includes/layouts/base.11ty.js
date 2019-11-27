@@ -1,3 +1,4 @@
+const Header = require("../../components/Header");
 const html = String.raw;
 
 module.exports = data => {
@@ -8,9 +9,13 @@ module.exports = data => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="/assets/css/global.css" />
       </head>
       <body>
-        ${data.content}
+        ${Header()}
+        <main class="stack5">
+          ${data.content}
+        </main>
       </body>
       <script
         async

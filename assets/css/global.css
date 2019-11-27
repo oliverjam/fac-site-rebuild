@@ -1,0 +1,257 @@
+:root {
+  --space0: 0rem;
+  --space1: 0.25rem;
+  --space2: 0.5rem;
+  --space3: 1rem;
+  --space4: 2rem;
+  --space5: 4rem;
+  --space6: 8rem;
+  --space7: 16rem;
+  --space8: 32rem;
+
+  --font0: 0.75rem;
+  --font1: 0.875rem;
+  --font2: 1rem;
+  --font3: 1.25rem;
+  --font4: 1.5rem;
+  --font5: 2rem;
+  --font6: 3rem;
+  --font7: 4rem;
+  --font8: 6rem;
+
+  --black: #121212;
+  --darkGray: #333;
+  --gray: #878787;
+  --lightGray: hsl(0, 0%, 88%);
+  --white: #fff;
+  --nearWhite: #fcfff7;
+  --green: #00be00;
+  --yellow: #ffe500;
+  --blue: #0805ec;
+  --red: #ff2800;
+
+  --text: var(--black);
+  --textLight: var(--white);
+  --background: var(--white);
+  --backgroundDark: var(--black);
+  --primary: var(--yellow);
+  --secondary: var(--blue);
+  --tertiary: var(--green);
+  --quarternary: var(--red);
+  --muted: var(--lightGray);
+  --border: var(--gray);
+
+  --sans: "Eesti", system-ui, -apple-system, BlinkMacSystemFont, Helvetica,
+    Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size-adjust: 0.46;
+}
+
+body {
+  display: grid;
+  /* header -> main (stretches to fill page height) -> footer */
+  grid-template-rows: auto 1fr auto;
+  /* stop main content overflowing grid:
+  https://css-tricks.com/preventing-a-grid-blowout/ */
+  grid-template-columns: minmax(0, 1fr);
+
+  font-size: var(--font2);
+  font-family: var(--sans);
+  line-height: 1.5;
+  color: var(--black);
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+body,
+p,
+figure {
+  margin: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-top: 1.5em;
+  line-height: 1;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Regular-Italic.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+.site-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--space3);
+}
+
+.site-header ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space3);
+  counter-reset: nav;
+}
+
+.site-header ul a {
+  position: relative;
+  display: grid;
+  gap: var(--space1);
+  width: 100%;
+  border-top: 2px solid var(--border);
+  padding-top: var(--space2);
+  font-size: var(--font1);
+  text-decoration: none;
+  color: inherit;
+  counter-increment: nav;
+}
+
+.site-header ul a::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary);
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.site-header ul a:hover::before,
+.site-header ul a[aria-current]::before {
+  transform: scaleX(1);
+}
+
+.site-header ul a::after {
+  content: counter(nav, decimal-leading-zero);
+}
+
+main {
+  width: 100%;
+  max-width: 66rem;
+  justify-self: center;
+  padding: var(--space3);
+}
+
+h1 {
+  font-size: var(--font7);
+  display: inline;
+  background-image: linear-gradient(
+    transparent,
+    transparent 70%,
+    var(--primary) 70%,
+    var(--primary) 85%,
+    transparent 85%
+  );
+}
+
+[class^="stack"] > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space3);
+}
+
+.stack4 > * + * {
+  margin-top: var(--space4);
+}
+
+.stack5 > * + * {
+  margin-top: var(--space5);
+}
+
+@media (min-width: 40em) {
+  body {
+    font-size: var(--font3);
+  }
+  .site-header {
+    padding: var(--space4);
+  }
+  .site-header ul {
+    gap: var(--space4);
+  }
+  main {
+    padding: var(--space4);
+  }
+  h1 {
+    font-size: var(--font8);
+  }
+}
+
+@media (min-width: 64em) {
+  main {
+    padding: var(--space5) var(--space4);
+  }
+}
+
+@media (min-width: 72em) {
+  .site-header ul {
+    gap: var(--space5);
+  }
+}
