@@ -9,30 +9,37 @@ exports.data = {
 };
 
 exports.render = data => {
-  const { title, intro, cohortSection, apply } = data;
+  const { title, intro, cohortSection, apply, prereqs } = data;
   return html`
     <h1>${title}</h1>
     ${md.render(intro)}
 
-    <section>
+    <section class="stack5">
       <h2>${cohortSection.title}</h2>
-      <ul>
+      <ul class="grid">
         ${cohortSection.cohorts.map(Cohort).join("")}
       </ul>
     </section>
 
-    <section>
+    <section class="stack5">
       <h2>${apply.title}</h2>
-      <ol>
+      <ol class="grid steps cycle-colors" style="--min-width: 20rem">
         ${apply.steps.map(Step).join("")}
       </ol>
+    </section>
+
+    <section class="stack5">
+      <h2>${prereqs.title}</h2>
+      <div class="stack">
+        ${md.render(prereqs.body)}
+      </div>
     </section>
   `;
 };
 
 function Cohort(c) {
   return html`
-    <li>
+    <li class="stack4">
       <h3>Cohort of ${c.name}</h3>
       ${c.dates
         .map(
@@ -60,7 +67,7 @@ function formatDate(d) {
 
 function Step(s) {
   return html`
-    <li>
+    <li class="stack">
       <h3>${s.title}</h3>
       ${md.render(s.body)}
     </li>

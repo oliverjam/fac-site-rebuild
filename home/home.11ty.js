@@ -14,14 +14,18 @@ exports.render = data => {
     <h1>${title}</h1>
     <video width="100%" src="${video}" muted autoplay loop></video>
 
-    <section>
+    <section class="stack">
       <h2>${intro.title}</h2>
       ${md.render(intro.body)}
     </section>
 
-    <section>
+    <section class="stack">
       <h2>${coop.title}</h2>
-      ${coop.logos.map(Logo).join("")}
+      <div class="cluster">
+        <div>
+          ${coop.logos.map(Logo).join("")}
+        </div>
+      </div>
     </section>
 
     ${testimonials.map(Testimonial).join("")}
@@ -30,7 +34,7 @@ exports.render = data => {
 
 function Logo(src) {
   return html`
-    <img src="${src}" height="64" alt="" />
+    <img src="${src}" height="48" style="height: 48px" alt="" />
   `;
 }
 

@@ -14,15 +14,15 @@ exports.render = data => {
     <h1>${title}</h1>
     ${md.render(intro)}
 
-    <section>
+    <section class="stack5">
       <h2>${faqSection.title}</h2>
-      <ul>
+      <ul class="grid">
         ${faqSection.faqs.map(Question).join("")}
       </ul>
       ${md.render(faqSection.outro)}
     </section>
 
-    <section>
+    <section class="stack5">
       <h2>${teamSection.title}</h2>
       ${teamSection.team.map(Employee).join("")}
     </section>
@@ -31,7 +31,7 @@ exports.render = data => {
 
 function Question({ title, body }) {
   return html`
-    <li>
+    <li class="stack">
       <h3>${title}</h3>
       ${md.render(body)}
     </li>

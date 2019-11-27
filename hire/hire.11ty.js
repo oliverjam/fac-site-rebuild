@@ -16,13 +16,17 @@ exports.render = data => {
     <img src="${image}" width="960" height="540" alt="" />
 
     <section aria-label="Our partners">
-      ${partners.map(Logo).join("")}
+      <div class="cluster" style="--gap: var(--space4)">
+        <div>
+          ${partners.map(Logo).join("")}
+        </div>
+      </div>
     </section>
   `;
 };
 
 function Logo(src) {
   return html`
-    <img src="${src}" height="64" alt="" />
+    <img src="${src}" height="48" style="height: 48px" alt="" />
   `;
 }
