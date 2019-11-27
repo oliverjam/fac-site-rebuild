@@ -1,0 +1,18 @@
+{
+  "name": "fac-eleventy",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "ELEVENTY_ENV=production eleventy"
+  },
+  "keywords": [],
+  "author": "@oliverjam",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "eslint": "^6.7.1"
+  }
+}
