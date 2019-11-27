@@ -13,7 +13,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "home/home.json"
+        file: "pages/home/home.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Video, name: video, widget: file }
@@ -42,7 +42,7 @@ collections:
               - { label: Image, name: image, widget: image }
       - label: "About Page"
         name: "about"
-        file: "about/about.json"
+        file: "pages/about/about.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -74,7 +74,7 @@ collections:
                   - { label: Image, name: image, widget: image }
       - label: "Apply Page"
         name: "apply"
-        file: "apply/apply.json"
+        file: "pages/apply/apply.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -114,7 +114,7 @@ collections:
               - { label: Body, name: body, widget: markdown }
       - label: "Hire Page"
         name: "hire"
-        file: "hire/hire.json"
+        file: "pages/hire/hire.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -125,7 +125,7 @@ collections:
             field: { label: Logo, name: logo, widget: image }
       - label: "T4B Page"
         name: "t4b"
-        file: "t4b/t4b.json"
+        file: "pages/t4b/t4b.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -166,7 +166,7 @@ collections:
                   - { label: URL, name: url, widget: string }
       - label: "Hire Page"
         name: "hire"
-        file: "hire/hire.json"
+        file: "pages/hire/hire.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
