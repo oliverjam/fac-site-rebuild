@@ -40,3 +40,43 @@ collections:
               - { label: Cohort, name: cohort, widget: string }
               - { label: Quote, name: quote, widget: string }
               - { label: Image, name: image, widget: image }
+      - label: "Apply Page"
+        name: "apply"
+        file: "apply/apply.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: "Cohort Section"
+            name: "cohorts"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: "Cohort"
+                name: "cohort"
+                widget: "object"
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - label: "Dates"
+                    name: "dates"
+                    widget: "list"
+                    fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: Open date, name: open, widget: date }
+                      - { label: Close date, name: close, widget: date }
+          - label: "Apply Section"
+            name: "apply"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Body, name: body, widget: markdown }
+          - label: "Prereqs Section"
+            name: "prereqs"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: markdown }
