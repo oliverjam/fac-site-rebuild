@@ -16,6 +16,7 @@ exports.render = data => {
       <h2>${intro.title}</h2>
       ${md.render(intro.body)}
     </section>
+    <hr class="divider" />
     <img src="${image}" width="960" height="540" alt="" />
 
     <section class="stack4">

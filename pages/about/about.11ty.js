@@ -13,6 +13,7 @@ exports.render = data => {
   return html`
     <h1>${title}</h1>
     ${md.render(intro)}
+    <hr class="divider" />
 
     <section class="stack5">
       <h2>${faqSection.title}</h2>

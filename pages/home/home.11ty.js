@@ -12,6 +12,7 @@ exports.render = data => {
   const { title, video, intro, coop, testimonials } = data;
   return html`
     <h1>${title}</h1>
+    <hr class="divider" />
     <video width="100%" src="${video}" muted autoplay loop></video>
 
     <section class="stack">

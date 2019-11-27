@@ -236,6 +236,26 @@ h6 {
   font-size: var(--font1);
 }
 
+.divider {
+  width: 0;
+  height: 100px;
+  border: 0;
+  border-left: var(--primary) double 12px;
+  transform: scaleY(0);
+  transform-origin: center top;
+  animation-name: scale-in;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scale-in {
+  to {
+    transform: scaleY(1);
+  }
+}
+
 [class^="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;

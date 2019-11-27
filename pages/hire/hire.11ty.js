@@ -13,6 +13,7 @@ exports.render = data => {
   return html`
     <h1>${title}</h1>
     ${md.render(intro)}
+    <hr class="divider" />
     <img src="${image}" width="960" height="540" alt="" />
 
     <section aria-label="Our partners">
