@@ -116,6 +116,10 @@ h6 {
   font-weight: 600;
 }
 
+a {
+  color: var(--secondary);
+}
+
 @font-face {
   font-family: "Eesti";
   src: url("/assets/fonts/GT-Eesti-Text-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
