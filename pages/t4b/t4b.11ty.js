@@ -14,7 +14,9 @@ exports.render = data => {
     <h1>${title}</h1>
     <section class="stack4">
       <h2>${intro.title}</h2>
-      ${md.render(intro.body)}
+      <div class="intro">
+        ${md.render(intro.body)}
+      </div>
     </section>
     <hr class="divider" />
     <img src="${image}" width="960" height="540" alt="" />

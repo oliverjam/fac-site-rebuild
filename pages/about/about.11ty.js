@@ -12,7 +12,9 @@ exports.render = data => {
   const { title, intro, faqSection, teamSection } = data;
   return html`
     <h1>${title}</h1>
-    ${md.render(intro)}
+    <div class="intro">
+      ${md.render(intro)}
+    </div>
     <hr class="divider" />
 
     <section class="stack5">

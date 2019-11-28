@@ -12,7 +12,9 @@ exports.render = data => {
   const { title, intro, image, partners } = data;
   return html`
     <h1>${title}</h1>
-    ${md.render(intro)}
+    <div class="intro">
+      ${md.render(intro)}
+    </div>
     <hr class="divider" />
     <img src="${image}" width="960" height="540" alt="" />
 

@@ -17,7 +17,9 @@ exports.render = data => {
 
     <section class="stack">
       <h2>${intro.title}</h2>
-      ${md.render(intro.body)}
+      <div class="intro">
+        ${md.render(intro.body)}
+      </div>
     </section>
 
     <section class="stack">

@@ -256,6 +256,16 @@ h6 {
   }
 }
 
+.intro {
+  font-size: var(--font4);
+}
+
+@media (min-width: 40em) {
+  .intro {
+    font-size: var(--font5);
+  }
+}
+
 [class^="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;
