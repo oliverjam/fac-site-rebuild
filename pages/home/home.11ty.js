@@ -8,13 +8,16 @@ exports.data = {
   layout: "layouts/base",
 };
 
+/**
+ * @param {import("./home").HomeData} data
+ */
 exports.render = data => {
   const { title, video, intro, coop, testimonials } = data;
   return html`
     <h1>${title}</h1>
     <hr class="divider" />
     <div class="circle-reveal">
-    <video width="100%" src="${video}" muted autoplay loop></video>
+      <video width="100%" src="${video}" muted autoplay loop></video>
     </div>
 
     <section class="stack">
