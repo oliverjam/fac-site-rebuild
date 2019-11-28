@@ -5,7 +5,7 @@ const postcssPresetEnv = require("postcss-preset-env");
 const cssnano = require("cssnano");
 
 // location of the postcss entrypoint file
-const inputPath = "../_includes/postcss/styles.css";
+const inputPath = "../_includes/postcss/styles.postcss";
 
 exports.data = () => {
   const filePath = path.join(__dirname, inputPath);
