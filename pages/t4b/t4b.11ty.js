@@ -6,6 +6,9 @@ const html = String.raw;
 exports.data = {
   permalink: "/tech-for-better/index.html",
   layout: "layouts/base",
+  tags: ["nav"],
+  navLabel: "Tech for Better",
+  order: 4,
 };
 
 exports.render = data => {

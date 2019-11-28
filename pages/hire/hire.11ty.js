@@ -6,6 +6,9 @@ const html = String.raw;
 exports.data = {
   permalink: "/hire/index.html",
   layout: "layouts/base",
+  tags: ["nav"],
+  navLabel: "Hire",
+  order: 3,
 };
 
 exports.render = data => {
