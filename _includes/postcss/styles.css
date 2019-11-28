@@ -66,6 +66,10 @@ body {
   font-family: var(--sans);
   line-height: 1.5;
   color: var(--black);
+
+  @media (min-width: 40em) {
+    font-size: var(--font3);
+  }
 }
 
 html,
@@ -156,6 +160,10 @@ a {
   align-items: center;
   flex-wrap: wrap;
   padding: var(--space3);
+
+  @media (min-width: 40em) {
+    padding: var(--space4);
+  }
 }
 
 .site-header ul {
@@ -165,6 +173,14 @@ a {
   grid-template-columns: repeat(5, 1fr);
   gap: var(--space3);
   counter-reset: nav;
+
+  @media (min-width: 40em) {
+    gap: var(--space4);
+  }
+
+  @media (min-width: 72em) {
+    gap: var(--space5);
+  }
 }
 
 .site-header ul a {
@@ -206,6 +222,14 @@ main {
   max-width: 66rem;
   justify-self: center;
   padding: var(--space3);
+
+  @media (min-width: 40em) {
+    padding: var(--space4);
+  }
+
+  @media (min-width: 64em) {
+    padding: var(--space5) var(--space4);
+  }
 }
 
 h1 {
@@ -218,18 +242,34 @@ h1 {
     var(--primary) 85%,
     transparent 85%
   );
+
+  @media (min-width: 40em) {
+    font-size: var(--font8);
+  }
 }
 
 h2 {
   font-size: var(--font4);
+
+  @media (min-width: 40em) {
+    font-size: var(--font5);
+  }
 }
 
 h3 {
   font-size: var(--font3);
+
+  @media (min-width: 40em) {
+    font-size: var(--font4);
+  }
 }
 
 h4 {
   font-size: var(--font2);
+
+  @media (min-width: 40em) {
+    font-size: var(--font3);
+  }
 }
 
 h5 {
@@ -262,10 +302,8 @@ h6 {
 
 .intro {
   font-size: var(--font4);
-}
 
-@media (min-width: 40em) {
-  .intro {
+  @media (min-width: 40em) {
     font-size: var(--font5);
   }
 }
@@ -325,10 +363,8 @@ h6 {
     var(--cycle-colour) 50%,
     var(--cycle-colour)
   );
-}
 
-@media (min-width: 40em) {
-  .steps li::before {
+  @media (min-width: 40em) {
     font-size: var(--font8);
   }
 }
@@ -347,43 +383,4 @@ h6 {
 
 .cycle-colors > *:nth-child(4n + 4) {
   --cycle-colour: var(--quarternary);
-}
-
-@media (min-width: 40em) {
-  body {
-    font-size: var(--font3);
-  }
-  .site-header {
-    padding: var(--space4);
-  }
-  .site-header ul {
-    gap: var(--space4);
-  }
-  main {
-    padding: var(--space4);
-  }
-  h1 {
-    font-size: var(--font8);
-  }
-  h2 {
-    font-size: var(--font5);
-  }
-  h3 {
-    font-size: var(--font4);
-  }
-  h4 {
-    font-size: var(--font3);
-  }
-}
-
-@media (min-width: 64em) {
-  main {
-    padding: var(--space5) var(--space4);
-  }
-}
-
-@media (min-width: 72em) {
-  .site-header ul {
-    gap: var(--space5);
-  }
 }
