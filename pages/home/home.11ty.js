@@ -6,6 +6,9 @@ const html = String.raw;
 exports.data = {
   permalink: "/",
   layout: "layouts/base",
+  tags: ["nav"],
+  navLabel: "Home",
+  order: 0,
 };
 
 /**

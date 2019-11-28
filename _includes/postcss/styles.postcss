@@ -1,7 +1,7 @@
 @custom-media --viewport-xs (min-width: 40em);
 @custom-media --viewport-s (min-width: 52em);
-@custom-media --viewport-m (minwidth: 64em);
-@custom-media --viewport-l (minwidth: 72em);
+@custom-media --viewport-m (min-width: 64em);
+@custom-media --viewport-l (min-width: 72em);
 
 :root {
   --space0: 0rem;
@@ -45,6 +45,8 @@
   --quarternary: var(--red);
   --muted: var(--lightGray);
   --border: var(--gray);
+
+  --page-width: 66rem;
 
   --sans: "Eesti", system-ui, -apple-system, BlinkMacSystemFont, Helvetica,
     Arial, sans-serif;
@@ -195,7 +197,7 @@ a {
 
 main {
   width: 100%;
-  max-width: 66rem;
+  max-width: var(--page-width);
   justify-self: center;
   padding: var(--space3);
 
@@ -293,6 +295,10 @@ h6 {
   margin-top: var(--space3);
 }
 
+.stack2 > * + * {
+  margin-top: var(--space2);
+}
+
 .stack4 > * + * {
   margin-top: var(--space4);
 }
@@ -369,6 +375,90 @@ h6 {
 @keyframes circle {
   to {
     clip-path: circle(100% at 50% 0);
+  }
+}
+
+.site-footer {
+  background-color: var(--text);
+  color: var(--background);
+
+  & > * {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: var(--space4);
+  }
+}
+
+.next-page {
+  flex: 1;
+  display: grid;
+  align-content: center;
+}
+
+.next-page h2 {
+  margin-bottom: var(--space4);
+  font-size: var(--font4);
+}
+
+.next-page a {
+  font-size: var(--font7);
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+  }
+
+  @media (--viewport-xs) {
+    font-size: var(--font8);
+  }
+}
+
+.site-info {
+  font-size: var(--font2);
+
+  &::before {
+    content: "";
+    display: block;
+    width: var(--space6);
+    height: 2px;
+    border-top: var(--space2) double var(--primary);
+  }
+  @media (--viewport-m) {
+    text-align: center;
+
+    &::before {
+      margin: 0 auto;
+    }
+  }
+}
+
+.contact {
+  margin-top: var(--space3);
+  display: grid;
+  gap: var(--space2);
+
+  & address {
+    font-style: normal;
+  }
+
+  & .contact-divider {
+    display: none;
+  }
+
+  @media (--viewport-m) {
+    grid-template-columns: max-content max-content max-content;
+    justify-content: center;
+
+    & .contact-divider {
+      display: block;
+    }
   }
 }
 

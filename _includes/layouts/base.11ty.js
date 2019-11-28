@@ -3,7 +3,9 @@ const html = String.raw;
 module.exports = data => {
   const pages = [...data.collections.nav]
     .sort((a, b) => a.data.order - b.data.order)
-    .map(n => ({ label: n.data.navLabel, url: n.url }));
+    .map(n => ({ label: n.data.navLabel, url: n.url, title: n.data.title }));
+
+  const nextPage = pages[(data.order + 1) % pages.length];
   return html`
     <!DOCTYPE html>
     <html lang="en">
@@ -18,6 +20,7 @@ module.exports = data => {
         <main class="stack5">
           ${data.content}
         </main>
+        ${Footer({ nextPage, site: data.site })}
       </body>
       <script
         async
@@ -39,14 +42,16 @@ module.exports = data => {
 };
 
 function Header({ pages, currentUrl }) {
+  // home page shouldn't appear in nav
+  const navPages = pages.filter(p => p.url !== "/");
   return html`
     <header class="site-header">
       <a href="/" aria-label="Home page">
         ${Logo()}
       </a>
       <nav>
-        <ul style="--cols: ${pages.length}">
-          ${pages.map(NavItem(currentUrl)).join("")}
+        <ul style="--cols: ${navPages.length}">
+          ${navPages.map(NavItem(currentUrl)).join("")}
         </ul>
       </nav>
     </header>
@@ -62,6 +67,32 @@ function NavItem(currentUrl) {
       </li>
     `;
   };
+}
+
+function Footer({ nextPage, site }) {
+  const nextPageLabel =
+    nextPage.url === "/" ? "Back to home page" : nextPage.title;
+  return html`
+    <footer class="site-footer">
+      <div>
+        <div class="next-page">
+          <h2>Next</h2>
+          <a href="${nextPage.url}" rel="next">${nextPageLabel}</a>
+        </div>
+        <div class="site-info stack2">
+          <div class="contact">
+            <span>${site.email}</span>
+            <span class="contact-divider">|</span>
+            <address>${site.address}</address>
+          </div>
+          <div class="copyright">
+            © ${new Date().getFullYear()} Founders and Coders. All rights
+            reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  `;
 }
 
 function Logo() {
