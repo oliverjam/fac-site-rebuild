@@ -361,6 +361,17 @@ h6 {
   --cycle-colour: var(--quarternary);
 }
 
+.circle-reveal {
+  clip-path: circle(0% at 50% 0);
+  animation: circle 0.7s 1s ease-in forwards;
+}
+
+@keyframes circle {
+  to {
+    clip-path: circle(100% at 50% 0);
+  }
+}
+
 @font-face {
   font-family: "Eesti";
   src: url("/assets/fonts/GT-Eesti-Text-Regular.ttf") format("truetype"); /* Safari, Android, iOS */

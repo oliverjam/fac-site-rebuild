@@ -22,7 +22,9 @@ exports.render = data => {
       </div>
     </section>
     <hr class="divider" />
-    <img src="${image}" width="960" height="540" alt="" />
+    <div class="circle-reveal">
+      <img src="${image}" width="960" height="540" alt="" />
+    </div>
 
     <section class="stack4">
       <h2>${apply.title}</h2>

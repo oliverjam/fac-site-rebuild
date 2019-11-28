@@ -13,7 +13,9 @@ exports.render = data => {
   return html`
     <h1>${title}</h1>
     <hr class="divider" />
+    <div class="circle-reveal">
     <video width="100%" src="${video}" muted autoplay loop></video>
+    </div>
 
     <section class="stack">
       <h2>${intro.title}</h2>
