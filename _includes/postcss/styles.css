@@ -1,3 +1,8 @@
+@custom-media --viewport-xs (min-width: 40em);
+@custom-media --viewport-s (min-width: 52em);
+@custom-media --viewport-m (minwidth: 64em);
+@custom-media --viewport-l (minwidth: 72em);
+
 :root {
   --space0: 0rem;
   --space1: 0.25rem;
@@ -67,7 +72,7 @@ body {
   line-height: 1.5;
   color: var(--black);
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     font-size: var(--font3);
   }
 }
@@ -124,35 +129,6 @@ a {
   color: var(--secondary);
 }
 
-@font-face {
-  font-family: "Eesti";
-  src: url("/assets/fonts/GT-Eesti-Text-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Eesti";
-  src: url("/assets/fonts/GT-Eesti-Text-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Eesti";
-  src: url("/assets/fonts/GT-Eesti-Text-Light.ttf") format("truetype"); /* Safari, Android, iOS */
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Eesti";
-  src: url("/assets/fonts/GT-Eesti-Text-Regular-Italic.ttf") format("truetype"); /* Safari, Android, iOS */
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
 .site-header {
   width: 100%;
   display: flex;
@@ -161,7 +137,7 @@ a {
   flex-wrap: wrap;
   padding: var(--space3);
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     padding: var(--space4);
   }
 }
@@ -174,11 +150,11 @@ a {
   gap: var(--space3);
   counter-reset: nav;
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     gap: var(--space4);
   }
 
-  @media (min-width: 72em) {
+  @media (--viewport-l) {
     gap: var(--space5);
   }
 }
@@ -223,11 +199,11 @@ main {
   justify-self: center;
   padding: var(--space3);
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     padding: var(--space4);
   }
 
-  @media (min-width: 64em) {
+  @media (--viewport-m) {
     padding: var(--space5) var(--space4);
   }
 }
@@ -243,7 +219,7 @@ h1 {
     transparent 85%
   );
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     font-size: var(--font8);
   }
 }
@@ -251,7 +227,7 @@ h1 {
 h2 {
   font-size: var(--font4);
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     font-size: var(--font5);
   }
 }
@@ -259,7 +235,7 @@ h2 {
 h3 {
   font-size: var(--font3);
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     font-size: var(--font4);
   }
 }
@@ -267,7 +243,7 @@ h3 {
 h4 {
   font-size: var(--font2);
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     font-size: var(--font3);
   }
 }
@@ -303,7 +279,7 @@ h6 {
 .intro {
   font-size: var(--font4);
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     font-size: var(--font5);
   }
 }
@@ -364,7 +340,7 @@ h6 {
     var(--cycle-colour)
   );
 
-  @media (min-width: 40em) {
+  @media (--viewport-xs) {
     font-size: var(--font8);
   }
 }
@@ -383,4 +359,33 @@ h6 {
 
 .cycle-colors > *:nth-child(4n + 4) {
   --cycle-colour: var(--quarternary);
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Eesti";
+  src: url("/assets/fonts/GT-Eesti-Text-Regular-Italic.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
