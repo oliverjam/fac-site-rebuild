@@ -19,11 +19,12 @@ exports.data = () => {
 };
 
 exports.render = async ({ rawCss, filePath }) => {
+  const prod = process.env.ELEVENTY_ENV === "production";
   const plugins = [
     // stage 1 allows nesting :tada:
-    postcssPresetEnv({ stage: 1 }),
+    postcssPresetEnv({ stage: 1, autoprefixer: prod }),
     // only minify in prod
-    process.env.ELEVENTY_ENV === "production" && cssnano,
+    prod && cssnano,
   ].filter(Boolean);
 
   return postcss(plugins)
