@@ -1,7 +1,7 @@
 const Markdown = require("markdown-it");
 const md = new Markdown();
 
-const html = String.raw;
+const html = require("../../html");
 
 exports.data = {
   permalink: "/",
@@ -34,12 +34,12 @@ exports.render = data => {
       <h2>${coop.title}</h2>
       <div class="cluster">
         <div>
-          ${coop.logos.map(Logo).join("")}
+          ${coop.logos.map(Logo)}
         </div>
       </div>
     </section>
 
-    ${testimonials.map(Testimonial).join("")}
+    ${testimonials.map(Testimonial)}
   `;
 };
 

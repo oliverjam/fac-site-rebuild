@@ -1,7 +1,7 @@
 const Markdown = require("markdown-it");
 const md = new Markdown();
 
-const html = String.raw;
+const html = require("../../html");
 
 exports.data = {
   permalink: "/about/index.html",
@@ -23,14 +23,14 @@ exports.render = data => {
     <section class="stack5">
       <h2>${faqSection.title}</h2>
       <ul class="grid">
-        ${faqSection.faqs.map(Question).join("")}
+        ${faqSection.faqs.map(Question)}
       </ul>
       ${md.render(faqSection.outro)}
     </section>
 
     <section class="stack5">
       <h2>${teamSection.title}</h2>
-      ${teamSection.team.map(Employee).join("")}
+      ${teamSection.team.map(Employee)}
     </section>
   `;
 };

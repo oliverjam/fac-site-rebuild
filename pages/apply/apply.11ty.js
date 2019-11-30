@@ -1,7 +1,7 @@
 const Markdown = require("markdown-it");
 const md = new Markdown();
 
-const html = String.raw;
+const html = require("../../html");
 
 exports.data = {
   permalink: "/apply/index.html",
@@ -23,14 +23,14 @@ exports.render = data => {
     <section class="stack5">
       <h2>${cohortSection.title}</h2>
       <ul class="grid">
-        ${cohortSection.cohorts.map(Cohort).join("")}
+        ${cohortSection.cohorts.map(Cohort)}
       </ul>
     </section>
 
     <section class="stack5">
       <h2>${apply.title}</h2>
       <ol class="grid steps cycle-colors" style="--min-width: 20rem">
-        ${apply.steps.map(Step).join("")}
+        ${apply.steps.map(Step)}
       </ol>
     </section>
 
@@ -47,16 +47,14 @@ function Cohort(c) {
   return html`
     <li class="stack4">
       <h3>Cohort of ${c.name}</h3>
-      ${c.dates
-        .map(
-          d => html`
-            <h4>${d.title}</h4>
-            <time datetime="${d.open}">${formatDate(d.open)}</time>
-            -
-            <time datetime="${d.close}">${formatDate(d.close)}</time>
-          `
-        )
-        .join("")}
+      ${c.dates.map(
+        d => html`
+          <h4>${d.title}</h4>
+          <time datetime="${d.open}">${formatDate(d.open)}</time>
+          -
+          <time datetime="${d.close}">${formatDate(d.close)}</time>
+        `
+      )}
     </li>
   `;
 }

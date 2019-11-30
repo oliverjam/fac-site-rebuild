@@ -1,4 +1,4 @@
-const html = String.raw;
+const html = require("../../html");
 
 module.exports = data => {
   const pages = [...data.collections.nav]
@@ -51,7 +51,7 @@ function Header({ pages, currentUrl }) {
       </a>
       <nav>
         <ul style="--cols: ${navPages.length}">
-          ${navPages.map(NavItem(currentUrl)).join("")}
+          ${navPages.map(NavItem(currentUrl))}
         </ul>
       </nav>
     </header>

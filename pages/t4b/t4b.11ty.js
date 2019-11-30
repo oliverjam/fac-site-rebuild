@@ -1,7 +1,7 @@
 const Markdown = require("markdown-it");
 const md = new Markdown();
 
-const html = String.raw;
+const html = require("../../html");
 
 exports.data = {
   permalink: "/tech-for-better/index.html",
@@ -29,21 +29,21 @@ exports.render = data => {
     <section class="stack4">
       <h2>${apply.title}</h2>
       <ol class="grid cycle-colors" style="--min-width: 20rem">
-        ${apply.steps.map(Step).join("")}
+        ${apply.steps.map(Step)}
       </ol>
     </section>
 
     <section class="stack4">
       <h2>${faqSection.title}</h2>
       <ul class="grid cycle-colors" style="--min-width: 20rem">
-        ${faqSection.faqs.map(Step).join("")}
+        ${faqSection.faqs.map(Step)}
       </ul>
     </section>
 
     <section class="stack4">
       <h2>${caseStudies.title}</h2>
       <ul class="stack">
-        ${caseStudies.apps.map(App).join("")}
+        ${caseStudies.apps.map(App)}
       </ul>
     </section>
 

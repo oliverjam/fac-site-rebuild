@@ -1,7 +1,7 @@
 const Markdown = require("markdown-it");
 const md = new Markdown();
 
-const html = String.raw;
+const html = require("../../html");
 
 exports.data = {
   permalink: "/hire/index.html",
@@ -24,7 +24,7 @@ exports.render = data => {
     <section aria-label="Our partners">
       <div class="cluster" style="--gap: var(--space4)">
         <div>
-          ${partners.map(Logo).join("")}
+          ${partners.map(Logo)}
         </div>
       </div>
     </section>
