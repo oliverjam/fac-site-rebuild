@@ -14,6 +14,11 @@
 // e.g. html`hello ${2 + 2} world` is equivalent to:
 // html(["hello ", " world"], 4)
 // we loop through the strings, stopping to add the interpolation at each index
+//
+// minor caveat: booleans attributes in HTML are annoying
+// e.g. disabled="false" disabled="" are both treated as true
+// to _not_ set an attribute it needs to not be present at all
+// like this: <button ${isLoading && "disabled"}>Hi</button>
 
 function html(strings, ...interpolations) {
   return strings
