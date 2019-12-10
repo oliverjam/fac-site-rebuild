@@ -182,7 +182,7 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - { label: Image, name: image, widget: image }
-          - label: "Schedule"
+          - label: "Scheduled Events"
             name: "schedule"
             widget: "list"
             fields:
@@ -192,16 +192,14 @@ collections:
                 widget: "select"
                 options:
                   - {
-                      name: "Coding For Everyone",
+                      label: "Coding For Everyone",
                       value: "coding-for-everyone",
                     }
-                  - { name: "Short Course", value: "short-course" }
+                  - { label: "Short Course", value: "short-course" }
   - label: "Events"
     name: "events"
     folder: "events"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
