@@ -70,6 +70,7 @@ function NavItem(currentUrl) {
 }
 
 function Footer({ nextPage, site }) {
+  if (!nextPage) return null;
   const nextPageLabel =
     nextPage.url === "/" ? "Back to home page" : nextPage.title;
   return html`
