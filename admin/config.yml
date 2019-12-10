@@ -181,7 +181,6 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
-          - { label: Image, name: image, widget: image }
           - label: "Scheduled Events"
             name: "schedule"
             widget: "list"
