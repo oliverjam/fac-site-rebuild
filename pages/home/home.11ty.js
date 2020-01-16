@@ -39,7 +39,11 @@ exports.render = data => {
       </div>
     </section>
 
-    ${testimonials.map(Testimonial)}
+    <section class="full-width stripes">
+      <div class="reel" tabindex="0">
+        ${testimonials.map(Testimonial)}
+      </div>
+    </section>
   `;
 };
 
@@ -51,13 +55,15 @@ function Logo(src) {
 
 function Testimonial({ name, cohort, image, quote }) {
   return html`
-  <figure>
+  <figure class="testimonial">
     <figcaption>
       <h3>${name}</h3>
       <div>${cohort}</h3>
     </figcaption>
-    <img src="${image}" width="499" height="735" alt="">
-    <div>${quote}</div>
+    <div class="image">
+      <img src="${image}" width="499" height="735" alt="">
+    </div>
+    <blockquote>${quote}</blockquote>
   </figure>
 `;
 }

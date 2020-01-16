@@ -80,9 +80,7 @@ body {
 }
 
 html,
-body,
-#___gatsby,
-#gatsby-focus-wrapper {
+body {
   height: 100%;
 }
 
@@ -98,7 +96,8 @@ body,
 
 body,
 p,
-figure {
+figure,
+blockquote {
   margin: 0;
 }
 
@@ -334,6 +333,56 @@ h6 {
   grid-gap: var(--gap);
 }
 
+.full-width {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.stripes {
+  --py: var(--space5);
+  --px: var(--space4);
+  padding: var(--py) var(--px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--muted),
+    var(--muted) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+}
+
+/* If stripey bg is last thing in main this removes gap above footer */
+main > .stripes:last-child {
+  margin-bottom: calc(var(--space3) * -1);
+
+  @media (--viewport-xs) {
+    margin-bottom: calc(var(--space4) * -1);
+  }
+
+  @media (--viewport-m) {
+    margin-bottom: calc(var(--space5) * -1);
+  }
+}
+
+.reel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.reel > * {
+  scroll-snap-align: center;
+  flex: 1 0 100%;
+
+  @media (--viewport-xs) {
+    flex: 1 0 28rem;
+  }
+}
+
+.reel > * + * {
+  margin-left: var(--space5);
+}
+
 .top-stripe::before {
   content: "";
   display: block;
@@ -389,6 +438,74 @@ h6 {
   to {
     clip-path: circle(100% at 50% 0);
   }
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, auto);
+  align-items: start;
+}
+
+.testimonial figcaption {
+  width: max-content;
+  display: grid;
+  justify-items: right;
+  grid-row: 1 / 3;
+  grid-column: 1 / 4;
+  z-index: 10;
+}
+
+.testimonial figcaption > * {
+  padding: var(--space2);
+  background-color: var(--background);
+}
+
+.testimonial figcaption > *:last-child {
+  padding-top: 0;
+}
+
+.testimonial figcaption > h3 {
+  margin: 0;
+  font-size: var(--font6);
+  text-transform: uppercase;
+}
+
+.testimonial .image {
+  grid-row: 2 / 9;
+  grid-column: 2 / 12;
+  align-self: stretch;
+  border: var(--space2) solid var(--primary);
+}
+
+.testimonial img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial blockquote {
+  grid-row: 8 / -1;
+  grid-column: 3 / -1;
+  padding: var(--space3);
+  font-style: italic;
+  line-height: 1.3;
+  background-color: var(--background);
+  quotes: "“" "”" "‘" "’";
+
+  @media (--viewport-xs) {
+    grid-row: 7 / -1;
+    grid-column: 4 / -1;
+  }
+}
+
+.testimonial blockquote::before {
+  content: open-quote;
+}
+
+.testimonial blockquote::after {
+  content: close-quote;
 }
 
 .site-footer {
