@@ -10,9 +10,9 @@
   --space3: 1rem;
   --space4: 2rem;
   --space5: 4rem;
-  --space6: 8rem;
-  --space7: 16rem;
-  --space8: 32rem;
+  --space6: 6rem;
+  --space7: 8rem;
+  --space8: 10rem;
 
   --font0: 0.75rem;
   --font1: 0.875rem;
@@ -307,6 +307,10 @@ h6 {
   margin-top: var(--space5);
 }
 
+.stack6 > * + * {
+  margin-top: var(--space6);
+}
+
 .cluster {
   --gap: var(--space3);
   overflow: hidden;
@@ -324,7 +328,7 @@ h6 {
 
 .grid {
   --min-width: 16rem;
-  --gap: var(--space4);
+  --gap: var(--space5);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
   grid-gap: var(--gap);

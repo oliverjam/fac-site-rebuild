@@ -17,7 +17,7 @@ module.exports = data => {
       </head>
       <body>
         ${Header({ pages, currentUrl: data.page.url })}
-        <main class="stack5">
+        <main class="stack6">
           ${data.content}
         </main>
         ${Footer({ nextPage, site: data.site })}
