@@ -327,7 +327,16 @@ h6 {
   --gap: var(--space4);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--min-width), 1fr));
-  gap: var(--gap);
+  grid-gap: var(--gap);
+}
+
+.top-stripe::before {
+  content: "";
+  display: block;
+  width: 7rem;
+  height: 0.5rem;
+  margin-bottom: var(--space4);
+  background-color: var(--cycle-colour);
 }
 
 .steps li {

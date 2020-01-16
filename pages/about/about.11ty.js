@@ -22,7 +22,7 @@ exports.render = data => {
 
     <section class="stack5">
       <h2>${faqSection.title}</h2>
-      <ul class="grid">
+      <ul class="grid cycle-colors">
         ${faqSection.faqs.map(Question)}
       </ul>
       ${md.render(faqSection.outro)}
@@ -37,7 +37,7 @@ exports.render = data => {
 
 function Question({ title, body }) {
   return html`
-    <li class="stack">
+    <li class="stack top-stripe">
       <h3>${title}</h3>
       ${md.render(body)}
     </li>

@@ -28,7 +28,7 @@ exports.render = data => {
 
     <section class="stack4">
       <h2>${apply.title}</h2>
-      <ol class="grid cycle-colors" style="--min-width: 20rem">
+      <ol class="grid steps cycle-colors" style="--min-width: 20rem">
         ${apply.steps.map(Step)}
       </ol>
     </section>
@@ -36,7 +36,7 @@ exports.render = data => {
     <section class="stack4">
       <h2>${faqSection.title}</h2>
       <ul class="grid cycle-colors" style="--min-width: 20rem">
-        ${faqSection.faqs.map(Step)}
+        ${faqSection.faqs.map(Info)}
       </ul>
     </section>
 
@@ -57,6 +57,15 @@ exports.render = data => {
 function Step({ title, body }) {
   return html`
     <li class="stack">
+      <h3>${title}</h3>
+      ${md.render(body)}
+    </li>
+  `;
+}
+
+function Info({ title, body }) {
+  return html`
+    <li class="stack top-stripe">
       <h3>${title}</h3>
       ${md.render(body)}
     </li>

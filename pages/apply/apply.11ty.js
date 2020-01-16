@@ -22,7 +22,7 @@ exports.render = data => {
 
     <section class="stack5">
       <h2>${cohortSection.title}</h2>
-      <ul class="grid">
+      <ul class="grid cycle-colors">
         ${cohortSection.cohorts.map(Cohort)}
       </ul>
     </section>
@@ -45,7 +45,7 @@ exports.render = data => {
 
 function Cohort(c) {
   return html`
-    <li class="stack4">
+    <li class="stack4 top-stripe">
       <h3>Cohort of ${c.name}</h3>
       ${c.dates.map(
         d => html`
