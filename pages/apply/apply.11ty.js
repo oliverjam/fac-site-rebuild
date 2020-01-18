@@ -12,7 +12,14 @@ exports.data = {
 };
 
 exports.render = data => {
-  const { title, intro, cohortSection, apply, prereqs } = data;
+  const {
+    title,
+    intro,
+    cohortSection,
+    apply,
+    prereqs,
+    cohortImageSection,
+  } = data;
   return html`
     <h1>${title}</h1>
     <div class="intro">
@@ -38,6 +45,13 @@ exports.render = data => {
       <h2>${prereqs.title}</h2>
       <div class="stack">
         ${md.render(prereqs.body)}
+      </div>
+    </section>
+
+    <section class="stack">
+      <h2>${cohortImageSection.title}</h2>
+      <div class="reel">
+        ${cohortImageSection.images.map(CohortImage)}
       </div>
     </section>
   `;
@@ -75,5 +89,14 @@ function Step(s) {
       <h3>${s.title}</h3>
       ${md.render(s.body)}
     </li>
+  `;
+}
+
+function CohortImage({ name, image }) {
+  return html`
+    <figure style="flex: 1 0 100%">
+      <figcaption>${name}</figcaption>
+      <img src="${image}" alt="" />
+    </figure>
   `;
 }
