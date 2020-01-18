@@ -23,6 +23,8 @@
   --font6: 3rem;
   --font7: 4rem;
   --font8: 6rem;
+  --font9: 8rem;
+  --font10: 11rem;
 
   --black: #121212;
   --darkGray: #333;
@@ -257,16 +259,32 @@ h6 {
   font-size: var(--font1);
 }
 
+.giant-title {
+  font-size: var(--font7);
+
+  @media (--viewport-xs) {
+    font-size: var(--font8);
+  }
+
+  @media (--viewport-s) {
+    font-size: var(--font9);
+  }
+
+  @media (--viewport-m) {
+    font-size: var(--font10);
+  }
+}
+
 .divider {
   width: 0;
   height: 100px;
   border: 0;
-  border-left: var(--primary) double 12px;
+  border-left: var(--primary) double 16px;
   transform: scaleY(0);
   transform-origin: center top;
   animation-name: scale-in;
   animation-duration: 0.5s;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
@@ -333,6 +351,23 @@ h6 {
   grid-gap: var(--gap);
 }
 
+.marquee {
+  overflow-x: hidden;
+}
+
+.marquee > * {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  animation: marquee 5s infinite linear;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .full-width {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -351,7 +386,7 @@ h6 {
   );
 }
 
-/* If stripey bg is last thing in main this removes gap above footer */
+/* If stripey bg is last thing in main this removes gap above footer (matches padding-bottom of <main>) */
 main > .stripes:last-child {
   margin-bottom: calc(var(--space3) * -1);
 
@@ -427,7 +462,7 @@ main > .stripes:last-child {
 
 .circle-reveal {
   clip-path: circle(0% at 50% 0);
-  animation: circle 0.7s 1s ease-in forwards;
+  animation: circle 0.7s 3s ease-in forwards;
 }
 
 @keyframes circle {
