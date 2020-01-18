@@ -75,7 +75,7 @@ Information provided voluntarily by you. For example, when you register for info
 - Contact phone number
 - Work background
 - Other information as submitted from time to time
-  Information that you provide when you communicate with us - by any means
+- Information that you provide when you communicate with us - by any means
 
 ## Use of your information
 
