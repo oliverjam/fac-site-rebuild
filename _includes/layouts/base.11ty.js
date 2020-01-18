@@ -19,10 +19,7 @@ module.exports = data => {
         <link rel="stylesheet" href="/assets/css/styles.css" />
       </head>
       <body>
-        ${Header({ pages, currentUrl: data.page.url })}
-        <main class="stack6">
-          ${data.content}
-        </main>
+        ${Header({ pages, currentUrl: data.page.url })}${data.content}
         ${Footer({ nextPage, site: data.site })}
       </body>
       <script

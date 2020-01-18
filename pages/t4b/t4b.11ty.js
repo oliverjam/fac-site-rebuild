@@ -5,7 +5,7 @@ const html = require("../../html");
 
 exports.data = {
   permalink: "/tech-for-better/index.html",
-  layout: "layouts/base",
+  layout: "layouts/page",
   tags: ["nav"],
   navLabel: "Tech for Better",
   order: 4,

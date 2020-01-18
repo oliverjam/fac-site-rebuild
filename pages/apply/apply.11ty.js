@@ -5,7 +5,7 @@ const html = require("../../html");
 
 exports.data = {
   permalink: "/apply/index.html",
-  layout: "layouts/base",
+  layout: "layouts/page",
   tags: ["nav"],
   navLabel: "Apply",
   order: 2,
