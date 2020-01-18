@@ -119,6 +119,13 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
           - { label: Image, name: image, widget: image }
+          - label: "Quotes"
+            name: "quotes"
+            widget: "list"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Company, name: company, widget: string }
+              - { label: Body, name: body, widget: string }
           - label: "Partner logos"
             name: "partners"
             widget: "list"
