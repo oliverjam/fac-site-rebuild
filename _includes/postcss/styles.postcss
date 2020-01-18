@@ -549,12 +549,19 @@ main > .stripes:last-child {
   color: var(--background);
 
   & > * {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     max-width: 60rem;
     margin: 0 auto;
     padding: var(--space4);
+  }
+
+  &.full-height > * {
+    min-height: 100vh;
+  }
+
+  & a {
+    color: inherit;
   }
 }
 

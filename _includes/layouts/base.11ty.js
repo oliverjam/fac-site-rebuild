@@ -70,21 +70,32 @@ function NavItem(currentUrl) {
 }
 
 function Footer({ nextPage, site }) {
-  if (!nextPage) return null;
-  const nextPageLabel =
-    nextPage.url === "/" ? "Back to home page" : nextPage.title;
+  const nextPageLabel = nextPage
+    ? nextPage.url === "/"
+      ? "Back to home page"
+      : nextPage.title
+    : null;
   return html`
-    <footer class="site-footer">
+    <footer class="${nextPage ? "site-footer full-height" : "site-footer"}">
       <div>
-        <div class="next-page">
-          <h2>Next</h2>
-          <a href="${nextPage.url}" rel="next">${nextPageLabel}</a>
-        </div>
+        ${nextPage &&
+          html`
+            <div class="next-page">
+              <h2>Next</h2>
+              <a href="${nextPage.url}" rel="next">${nextPageLabel}</a>
+            </div>
+          `}
         <div class="site-info stack2">
           <div class="contact">
             <span>${site.email}</span>
             <span class="contact-divider">|</span>
             <address>${site.address}</address>
+          </div>
+          <div class="cluster">
+            <div style="justify-content: center">
+              <a href="/code-of-conduct">Code of Conduct</a>
+              <a href="/privacy-policy">Privacy Policy</a>
+            </div>
           </div>
           <div class="copyright">
             © ${new Date().getFullYear()} Founders and Coders. All rights
