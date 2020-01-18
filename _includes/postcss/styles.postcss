@@ -31,7 +31,7 @@
   --gray: #878787;
   --lightGray: hsl(0, 0%, 88%);
   --white: #fff;
-  --nearWhite: #fcfff7;
+  --nearWhite: hsl(0, 0%, 96%);
   --green: #00be00;
   --yellow: #ffe500;
   --blue: #0805ec;
@@ -41,6 +41,7 @@
   --textLight: var(--white);
   --background: var(--white);
   --backgroundDark: var(--black);
+  --backgroundMuted: var(--nearWhite);
   --primary: var(--yellow);
   --secondary: var(--blue);
   --tertiary: var(--green);
@@ -303,6 +304,16 @@ h6 {
   }
 }
 
+.vh {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 [class^="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;
@@ -351,21 +362,11 @@ h6 {
   grid-gap: var(--gap);
 }
 
-.marquee {
-  overflow-x: hidden;
-}
-
-.marquee > * {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  animation: marquee 5s infinite linear;
-}
-
-@keyframes marquee {
-  to {
-    transform: translateX(-100%);
-  }
+.box {
+  --pad: var(--space4);
+  --bg: var(--background);
+  padding: var(--pad);
+  background-color: var(--bg);
 }
 
 .full-width {
@@ -632,6 +633,77 @@ main > .stripes:last-child {
     & .contact-divider {
       display: block;
     }
+  }
+}
+
+.checkbox ~ label {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox ~ label::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+  border: 1px solid var(--backgroundDark);
+  border-radius: 2px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.checkbox:checked ~ label::before {
+  background-color: var(--backgroundDark);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="hsl(220, 10%, 90%)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+}
+
+.checkbox:focus ~ label::before {
+  box-shadow: 0 0 0 3px var(--border);
+}
+
+.slack-form {
+  display: grid;
+  justify-content: center;
+
+  & button {
+    margin: 1.5rem auto 0;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    font-size: inherit;
+    font-family: inherit;
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--backgroundDark);
+    color: #e3e5e8;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  & button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px var(--border);
+  }
+
+  & button::-moz-focus-inner {
+    border: 0;
+  }
+
+  & button > svg {
+    margin-left: 0.5rem;
+  }
+
+  /* visually "disable" button until form is valid  */
+  &:invalid button {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
