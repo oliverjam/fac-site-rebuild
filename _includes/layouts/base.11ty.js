@@ -76,7 +76,10 @@ function Footer({ nextPage, site }) {
       : nextPage.title
     : null;
   return html`
-    <footer class="${nextPage ? "site-footer full-height" : "site-footer"}">
+    <footer
+      class="${nextPage ? "site-footer full-height" : "site-footer"}"
+      id="footer"
+    >
       <div>
         ${nextPage &&
           html`
