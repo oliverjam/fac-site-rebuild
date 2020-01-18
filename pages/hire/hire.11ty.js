@@ -21,11 +21,10 @@ exports.render = data => {
     <hr class="divider" />
     <img src="${image}" width="960" height="540" alt="" />
 
-    <section aria-label="Our partners">
-      <div class="cluster" style="--gap: var(--space4)">
-        <div>
-          ${partners.map(Logo)}
-        </div>
+    <section class="stack">
+      <h2>Our Partners</h2>
+      <div class="reel">
+        ${partners.map(Logo)}
       </div>
     </section>
   `;

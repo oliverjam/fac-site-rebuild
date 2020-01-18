@@ -29,15 +29,13 @@ exports.render = data => {
 
     <section class="stack">
       <h2>${coop.title}</h2>
-      <div class="cluster">
-        <div>
-          ${coop.logos.map(Logo)}
-        </div>
+      <div class="reel">
+        ${coop.logos.map(Logo)}${coop.logos.map(Logo)}
       </div>
     </section>
 
     <section class="full-width stripes">
-      <div class="reel" tabindex="0">
+      <div class="reel" style="--gap: var(--space5)" tabindex="0">
         ${testimonials.map(Testimonial)}
       </div>
     </section>

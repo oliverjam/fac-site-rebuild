@@ -365,6 +365,7 @@ main > .stripes:last-child {
 }
 
 .reel {
+  --gap: var(--space4);
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -372,15 +373,10 @@ main > .stripes:last-child {
 
 .reel > * {
   scroll-snap-align: center;
-  flex: 1 0 100%;
-
-  @media (--viewport-xs) {
-    flex: 1 0 28rem;
-  }
 }
 
 .reel > * + * {
-  margin-left: var(--space5);
+  margin-left: var(--gap);
 }
 
 .top-stripe::before {
@@ -445,6 +441,11 @@ main > .stripes:last-child {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, auto);
   align-items: start;
+  flex: 1 0 100%;
+
+  @media (--viewport-xs) {
+    flex: 1 0 28rem;
+  }
 }
 
 .testimonial figcaption {
