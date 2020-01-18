@@ -11,6 +11,9 @@ module.exports = data => {
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
+        <title>
+          ${data.title || "Coding Bootcamp in London"} - ${data.site.title}
+        </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="/assets/css/styles.css" />
