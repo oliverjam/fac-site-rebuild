@@ -28,9 +28,10 @@ exports.render = data => {
       ${md.render(faqSection.outro)}
     </section>
 
-    <section class="stack5">
-      <h2>${teamSection.title}</h2>
-      ${teamSection.team.map(Employee)}
+    <section class="full-width stripes">
+      <div class="reel" style="--gap: var(--space5)" tabindex="0">
+        ${teamSection.team.map(Testimonial)}
+      </div>
     </section>
   `;
 };
@@ -44,14 +45,16 @@ function Question({ title, body }) {
   `;
 }
 
-function Employee({ name, role, image }) {
+function Testimonial({ name, role, image }) {
   return html`
-  <figure>
+  <figure class="testimonial">
     <figcaption>
       <h3>${name}</h3>
       <div>${role}</h3>
     </figcaption>
-    <img src="${image}" width="499" height="735" alt="">
+    <div class="image">
+      <img src="${image}" width="499" height="735" alt="">
+    </div>
   </figure>
 `;
 }

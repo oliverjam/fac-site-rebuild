@@ -82,14 +82,14 @@
         "image": "/assets/media/ines.png"
       },
       {
-        "name": "Joe Tanner",
-        "role": "Commercial partnerships",
-        "image": "/assets/media/joe.png"
-      },
-      {
         "name": "Yvonne Liu",
         "role": "Operations and international development",
         "image": "/assets/media/yvonne.png"
+      },
+      {
+        "name": "Joe Tanner",
+        "role": "Commercial partnerships",
+        "image": "/assets/media/joe.png"
       },
       {
         "name": "Rebecca Radding",
