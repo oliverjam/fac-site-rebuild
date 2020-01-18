@@ -11,9 +11,6 @@ exports.data = {
   order: 0,
 };
 
-/**
- * @param {import("./home").HomeData} data
- */
 exports.render = data => {
   const { title, video, intro, coop, testimonials } = data;
   return html`
