@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/document",
+  "permalink": "{{page.fileSlug}}/"
+}

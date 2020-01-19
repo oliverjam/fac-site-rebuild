@@ -1,7 +1,5 @@
 ---
 title: Privacy Policy
-layout: layouts/document
-permalink: /privacy-policy/
 ---
 
 Founders and Coders (“Founders and Coders”, “We”, “Us”, and “Our”) are fully committed to the protection of your privacy at all times. This Privacy Statement explains what happens to any Personal Data (any information relating to an identifiable living person who can be directly or indirectly identified in particular by reference to an identifier) that you provide to us, or that we collect from you whilst you visit our site. Please read this information carefully in order to fully understand how we treat such Personal Data. We do update this Policy from time to time so please review it regularly.

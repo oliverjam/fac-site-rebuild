@@ -1,11 +1,9 @@
 const Markdown = require("markdown-it");
 const md = new Markdown();
 
-const html = require("../../html");
+const html = require("../../../html");
 
 exports.data = {
-  permalink: "/apply/index.html",
-  layout: "layouts/page",
   tags: ["nav"],
   navLabel: "Apply",
   order: 2,

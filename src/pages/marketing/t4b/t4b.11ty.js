@@ -1,11 +1,10 @@
 const Markdown = require("markdown-it");
 const md = new Markdown();
 
-const html = require("../../html");
+const html = require("../../../html");
 
 exports.data = {
-  permalink: "/tech-for-better/index.html",
-  layout: "layouts/page",
+  permalink: "/tech-for-better/",
   tags: ["nav"],
   navLabel: "Tech for Better",
   order: 4,
