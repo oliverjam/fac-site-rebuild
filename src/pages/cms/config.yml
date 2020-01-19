@@ -113,14 +113,14 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Body, name: body, widget: markdown }
           - label: "Cohort Images Section"
-          name: "cohortImageSection"
-          widget: "object"
-          fields:
-            - { label: Title, name: title, widget: string }
-            - label: "Cohort Images"
-              name: "images"
-              widget: "list"
-              field: { label: Image, name: image, widget: image }
+            name: "cohortImageSection"
+            widget: "object"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: "Cohort Images"
+                name: "images"
+                widget: "list"
+                field: { label: Image, name: image, widget: image }
       - label: "Hire Page"
         name: "hire"
         file: "pages/hire/hire.json"
