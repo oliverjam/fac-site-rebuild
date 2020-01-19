@@ -13,7 +13,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "pages/home/home.json"
+        file: "pages/marketing/home/home.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Video, name: video, widget: file }
@@ -42,7 +42,7 @@ collections:
               - { label: Image, name: image, widget: image }
       - label: "About Page"
         name: "about"
-        file: "pages/about/about.json"
+        file: "pages/marketing/about/about.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -74,7 +74,7 @@ collections:
                   - { label: Image, name: image, widget: image }
       - label: "Apply Page"
         name: "apply"
-        file: "pages/apply/apply.json"
+        file: "pages/marketing/apply/apply.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -123,7 +123,7 @@ collections:
                 field: { label: Image, name: image, widget: image }
       - label: "Hire Page"
         name: "hire"
-        file: "pages/hire/hire.json"
+        file: "pages/marketing/hire/hire.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -141,7 +141,7 @@ collections:
             field: { label: Logo, name: logo, widget: image }
       - label: "T4B Page"
         name: "t4b"
-        file: "pages/t4b/t4b.json"
+        file: "pages/marketing/t4b/t4b.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -182,7 +182,7 @@ collections:
                   - { label: URL, name: url, widget: string }
       - label: "Hire Page"
         name: "hire"
-        file: "pages/hire/hire.json"
+        file: "pages/marketing/hire/hire.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -193,7 +193,7 @@ collections:
             field: { label: Logo, name: logo, widget: image }
       - label: "Events Page"
         name: "events"
-        file: "pages/events/events.json"
+        file: "pages/marketing/events/events.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
