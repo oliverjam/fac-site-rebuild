@@ -118,9 +118,9 @@ collections:
           fields:
             - { label: Title, name: title, widget: string }
             - label: "Cohort Images"
-            name: "images"
-            widget: "list"
-            field: { label: Image, name: image, widget: image }
+              name: "images"
+              widget: "list"
+              field: { label: Image, name: image, widget: image }
       - label: "Hire Page"
         name: "hire"
         file: "pages/hire/hire.json"
