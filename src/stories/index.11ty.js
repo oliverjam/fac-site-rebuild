@@ -3,6 +3,7 @@ const html = require("../html");
 exports.data = {
   layout: "layouts/marketing",
   tags: ["nav"],
+  title: "Stories by and about us",
   navLabel: "Stories",
   order: 5,
 };
@@ -13,7 +14,7 @@ exports.render = data => {
   const press = [...data.collections.press].reverse();
 
   return html`
-    <h1>Stories by and about us</h1>
+    <h1>${data.title}</h1>
     <p class="intro">
       Curious to learn more about us? Here you’ll find stories by and about our
       diverse community of founders and coders making a social impact with
