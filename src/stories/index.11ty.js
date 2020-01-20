@@ -19,21 +19,25 @@ exports.render = data => {
 
     <section class="stack">
       <h2>Stories by us</h2>
-      <div class="reel stripes">
-        ${byUs.map(Story)}
+      <div class="full-width xs stripes">
+        <div class="reel">
+          ${byUs.map(Story)}
+        </div>
       </div>
     </section>
 
     <section class="stack">
       <h2>Stories by us</h2>
-      <div class="reel stripes">
-        ${aboutUs.map(Story)}
+      <div class="full-width xs stripes">
+        <div class="reel">
+          ${aboutUs.map(Story)}
+        </div>
       </div>
     </section>
 
     <section class="stack">
       <h2>Stories by us</h2>
-      <div class="stripes">
+      <div class="full-width xs stripes">
         <div class="reel">
           ${press.map(Story)}
         </div>

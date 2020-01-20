@@ -376,11 +376,18 @@ h6 {
 .full-width {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+
+  &.xs {
+    @media (--viewport-xs) {
+      margin-left: initial;
+      margin-right: initial;
+    }
+  }
 }
 
 .stripes {
-  --py: var(--space5);
-  --px: var(--space4);
+  --py: var(--space3);
+  --px: var(--space3);
   padding: var(--py) var(--px);
   background-image: repeating-linear-gradient(
     -45deg,
@@ -389,6 +396,11 @@ h6 {
     transparent 2px,
     transparent 8px
   );
+
+  @media (--viewport-xs) {
+    --py: var(--space5);
+    --px: var(--space4);
+  }
 }
 
 /* If stripey bg is last thing in main this removes gap above footer (matches padding-bottom of <main>) */
