@@ -71,6 +71,7 @@ collections:
                   - { label: Name, name: name, widget: string }
                   - { label: Role, name: role, widget: string }
                   - { label: Image, name: image, widget: image }
+                  - { label: Href, name: href, widget: string }
       - label: "Apply Page"
         name: "apply"
         file: "src/pages/marketing/apply/apply.json"

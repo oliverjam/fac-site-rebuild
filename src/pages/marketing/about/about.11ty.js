@@ -43,16 +43,16 @@ function Question({ title, body }) {
   `;
 }
 
-function Testimonial({ name, role, image }) {
+function Testimonial({ name, role, image, href }) {
   return html`
   <figure class="testimonial">
     <figcaption>
       <h3>${name}</h3>
       <div>${role}</h3>
     </figcaption>
-    <div class="image">
+    <a class="image" href="${href}" aria-label="${name}'s LinkedIn profile">
       <img src="${image}" width="499" height="735" alt="">
-    </div>
+    </a>
   </figure>
 `;
 }
