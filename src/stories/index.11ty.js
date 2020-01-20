@@ -5,9 +5,9 @@ exports.data = {
 };
 
 exports.render = data => {
-  const byUs = data.collections["by-us"];
-  const aboutUs = data.collections["about-us"];
-  const press = data.collections.press;
+  const byUs = [...data.collections["by-us"]].reverse();
+  const aboutUs = [...data.collections["about-us"]].reverse();
+  const press = [...data.collections.press].reverse();
 
   return html`
     <h1>Stories by and about us</h1>
@@ -33,8 +33,10 @@ exports.render = data => {
 
     <section class="stack">
       <h2>Stories by us</h2>
-      <div class="reel stripes">
-        ${press.map(Story)}
+      <div class="stripes">
+        <div class="reel">
+          ${press.map(Story)}
+        </div>
       </div>
     </section>
   `;
@@ -44,10 +46,13 @@ function Story({ data: { title, image, url, page, author, date } }) {
   return html`
     <div class="card">
       <div class="image">
-        ${image &&
-          html`
-            <img src="${image}" alt="" width="400" height="225" />
-          `}
+        <img
+          src="${image || placeholder(title)}"
+          style="object-fit: ${image ? "cover" : "contain"}"
+          alt=""
+          width="400"
+          height="225"
+        />
       </div>
       <div class="stack2 body">
         <h3>
@@ -73,4 +78,14 @@ function Story({ data: { title, image, url, page, author, date } }) {
       </div>
     </div>
   `;
+}
+
+const images = [
+  "/assets/media/placeholder-0.svg",
+  "/assets/media/placeholder-1.svg",
+  "/assets/media/placeholder-2.svg",
+];
+function placeholder(title) {
+  const random = title.length % 3;
+  return images[random];
 }

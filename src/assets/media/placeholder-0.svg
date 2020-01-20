@@ -1,0 +1,28 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern
+      id="diagonalHatch"
+      patternUnits="userSpaceOnUse"
+      width="5"
+      height="5"
+    >
+      <path
+        d="M-1,1 l2,-2 M0,5 l5,-5 M4,6 l2,-2"
+        stroke="black"
+        strokeWidth="1"
+      />
+    </pattern>
+  </defs>
+
+  <g id="square" transform="scale(0.5) translate(50 50) rotate(45 50 50)" stroke="black">
+    <rect width="100" height="50" />
+    <rect y="50" width="50" height="50" fill="white" />
+    <rect
+      width="50"
+      height="50"
+      x="50"
+      y="50"
+      fill="url(#diagonalHatch)"
+    />
+  </g>
+</svg>
