@@ -1,7 +1,11 @@
 const html = require("../../html");
 
 module.exports = data => {
+  // get all the pages that should appear in the nav
   const pages = [...data.collections.nav]
+    // unpublished pages (i.e. with permalink: false) have no URL
+    .filter(page => page.url)
+    // nav order is manual (from page data)
     .sort((a, b) => a.data.order - b.data.order)
     .map(n => ({ label: n.data.navLabel, url: n.url, title: n.data.title }));
 

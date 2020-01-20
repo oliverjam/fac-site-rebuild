@@ -2,6 +2,9 @@ const html = require("../html");
 
 exports.data = {
   layout: "layouts/marketing",
+  tags: ["nav"],
+  navLabel: "Stories",
+  order: 5,
 };
 
 exports.render = data => {
