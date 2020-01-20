@@ -80,7 +80,7 @@ function Story({ data: { title, image, url, page, author, date } }) {
             html`
               <span aria-hidden="true" class="dot">⦁</span>
             `}
-          <time>${date}</time>
+          <time>${formatDate(date)}</time>
         </footer>
       </div>
     </div>
@@ -95,4 +95,12 @@ const images = [
 function placeholder(title) {
   const random = title.length % 3;
   return images[random];
+}
+
+function formatDate(d) {
+  return new Date(d).toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
