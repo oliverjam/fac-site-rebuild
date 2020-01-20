@@ -19,6 +19,7 @@ exports.render = data => {
       diverse community of founders and coders making a social impact with
       technology all over the world.
     </p>
+    <hr class="divider" />
 
     <section class="stack">
       <h2>Stories by us</h2>
