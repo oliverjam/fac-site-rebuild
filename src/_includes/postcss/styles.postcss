@@ -569,6 +569,38 @@ main > .stripes:last-child {
   }
 }
 
+.sticky {
+  --bg: var(--primary);
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space2) var(--space3);
+  font-weight: bold;
+  line-height: 1;
+  background-color: var(--bg);
+
+  @media (--viewport-xs) {
+    padding: var(--space3);
+  }
+
+  & > a {
+    flex: 0 0 auto;
+    margin-left: var(--space3);
+    padding: var(--space1) var(--space2);
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--background);
+    color: inherit;
+
+    @media (--viewport-xs) {
+      margin-left: var(--space4);
+      padding: var(--space2) var(--space3);
+    }
+  }
+}
+
 .site-footer {
   background-color: var(--text);
   color: var(--background);

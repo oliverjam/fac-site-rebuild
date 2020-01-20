@@ -7,6 +7,11 @@ exports.data = {
   tags: ["nav"],
   navLabel: "Hire",
   order: 3,
+  sticky: {
+    text: "Think your company would be a good fit?",
+    href: "https://airtable.com/shrLFs9AORwMO93cb",
+    cta: "Get in touch",
+  },
 };
 
 exports.render = data => {

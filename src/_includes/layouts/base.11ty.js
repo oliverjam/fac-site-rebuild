@@ -20,6 +20,7 @@ module.exports = data => {
       </head>
       <body>
         ${Header({ pages, currentUrl: data.page.url })}${data.content}
+        ${data.sticky && Sticky(data.sticky)}
         ${Footer({ nextPage, site: data.site })}
       </body>
       <script
@@ -67,6 +68,15 @@ function NavItem(currentUrl) {
       </li>
     `;
   };
+}
+
+function Sticky({ text, href, cta }) {
+  return html`
+    <div class="sticky">
+      <div>${text}</div>
+      <a href="${href}">${cta}</a>
+    </div>
+  `;
 }
 
 function Footer({ nextPage, site }) {

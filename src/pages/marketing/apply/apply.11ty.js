@@ -7,6 +7,12 @@ exports.data = {
   tags: ["nav"],
   navLabel: "Apply",
   order: 2,
+  sticky: {
+    text: "Applications are currently closed",
+    cta: "Express interest",
+    href:
+      "https://docs.google.com/forms/d/e/1FAIpQLSepdNxKsrMjhfnbdkzKUgNpeWFmp8WLyiqTe_UY10TsPpFOEQ/viewform",
+  },
 };
 
 exports.render = data => {
