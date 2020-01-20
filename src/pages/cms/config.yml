@@ -8,6 +8,13 @@ site_url: "https://fac-rebuild.netlify.com"
 
 # Each page is a separate file with it's own custom fields
 collections:
+  - label: "Documents"
+    name: "documents"
+    folder: "src/pages/documents"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
   - label: "Pages"
     name: "pages"
     files:
