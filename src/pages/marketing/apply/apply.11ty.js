@@ -54,7 +54,7 @@ exports.render = data => {
 
     <section class="stack">
       <h2>${cohortImageSection.title}</h2>
-      <div class="reel">
+      <div class="reel" tabindex="0">
         ${cohortImageSection.images.map(CohortImage)}
       </div>
     </section>

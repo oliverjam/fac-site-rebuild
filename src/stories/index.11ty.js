@@ -25,7 +25,7 @@ exports.render = data => {
     <section class="stack">
       <h2>Stories by us</h2>
       <div class="full-width xs stripes">
-        <div class="reel">
+        <div class="reel" tabindex="0">
           ${byUs.map(Story)}
         </div>
       </div>
@@ -34,7 +34,7 @@ exports.render = data => {
     <section class="stack">
       <h2>Stories by us</h2>
       <div class="full-width xs stripes">
-        <div class="reel">
+        <div class="reel" tabindex="0">
           ${aboutUs.map(Story)}
         </div>
       </div>
@@ -43,7 +43,7 @@ exports.render = data => {
     <section class="stack">
       <h2>Stories by us</h2>
       <div class="full-width xs stripes">
-        <div class="reel">
+        <div class="reel" tabindex="0">
           ${press.map(Story)}
         </div>
       </div>

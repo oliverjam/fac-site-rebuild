@@ -28,7 +28,7 @@ exports.render = data => {
 
     <section class="stack">
       <h2>${coop.title}</h2>
-      <div class="reel">
+      <div class="reel" tabindex="0">
         ${coop.logos.map(Logo)}${coop.logos.map(Logo)}
       </div>
     </section>
