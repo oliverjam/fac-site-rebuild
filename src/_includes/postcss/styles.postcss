@@ -398,7 +398,7 @@ h6 {
   );
 
   @media (--viewport-xs) {
-    --py: var(--space5);
+    --py: var(--space4);
     --px: var(--space4);
   }
 }
@@ -418,6 +418,7 @@ main > .stripes:last-child {
 
 .reel {
   --gap: var(--space4);
+  --col: 28rem;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -425,6 +426,11 @@ main > .stripes:last-child {
 
 .reel > * {
   scroll-snap-align: center;
+  flex: 1 0 100%;
+
+  @media (--viewport-xs) {
+    flex: 1 0 var(--col);
+  }
 }
 
 .reel > * + * {
@@ -493,11 +499,6 @@ main > .stripes:last-child {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 2rem repeat(11, auto);
   align-items: start;
-  flex: 1 0 100%;
-
-  @media (--viewport-xs) {
-    flex: 1 0 28rem;
-  }
 }
 
 .testimonial figcaption {
@@ -644,14 +645,9 @@ main > .stripes:last-child {
 }
 
 .card {
-  flex: 1 0 100%;
   position: relative;
   display: grid;
   grid-template-rows: 225px 1fr;
-
-  @media (--viewport-xs) {
-    flex: 1 0 24rem;
-  }
 
   & .image {
     background-color: var(--backgroundMuted);

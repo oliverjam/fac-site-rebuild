@@ -29,7 +29,7 @@ exports.render = data => {
         <div class="reel" style="--gap: var(--space5)" tabindex="0">
           ${quotes.map(Quote)}
         </div>
-        <div class="reel" tabindex="0">
+        <div class="reel" tabindex="0" style="--col: auto">
           ${partners.map(Logo)}
         </div>
       </div>
