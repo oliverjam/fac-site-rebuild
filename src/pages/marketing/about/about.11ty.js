@@ -28,7 +28,7 @@ exports.render = data => {
     </section>
 
     <section class="full-width stripes">
-      <div class="reel" style="--gap: var(--space5)" tabindex="0">
+      <div class="reel" style="--gap: var(--space5); --col: 28rem" tabindex="0">
         ${teamSection.team.map(Testimonial)}
       </div>
     </section>
