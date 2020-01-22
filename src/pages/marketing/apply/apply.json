@@ -110,31 +110,31 @@
     "title": "Our developer community",
     "images": [
       {
-        "name": "FAC10",
+        "name": "Spring 2017",
         "image": "/assets/media/FAC10.jpg"
       },
       {
-        "name": "FAC13",
-        "image": "/assets/media/FAC13.jpg"
-      },
-      {
-        "name": "FAC14",
-        "image": "/assets/media/FAC14.jpg"
-      },
-      {
-        "name": "FACN3",
+        "name": "Winter 2017",
         "image": "/assets/media/FACN3.png"
       },
       {
-        "name": "FACG3",
+        "name": "Winter 2017",
         "image": "/assets/media/FACG3.png"
       },
       {
-        "name": "FAC15",
+        "name": "Spring 2018",
+        "image": "/assets/media/FAC13.jpg"
+      },
+      {
+        "name": "Summer 2018",
+        "image": "/assets/media/FAC14.jpg"
+      },
+      {
+        "name": "Winter 2018",
         "image": "/assets/media/FAC15.jpg"
       },
       {
-        "name": "FAC16",
+        "name": "Spring 2019",
         "image": "/assets/media/FAC16.jpg"
       }
     ]
