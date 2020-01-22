@@ -2,6 +2,7 @@ const Markdown = require("markdown-it");
 const md = new Markdown();
 
 const html = require("../../../html");
+const Heading = require("../../../_includes/components/heading");
 
 exports.data = {
   permalink: "/",
@@ -20,14 +21,15 @@ exports.render = data => {
     </div>
 
     <section class="stack">
-      <h2>${intro.title}</h2>
+      ${Heading({ tag: "h2", children: intro.title })}
       <div class="intro">
         ${md.render(intro.body)}
       </div>
     </section>
 
     <section class="stack">
-      <h2>${coop.title}</h2>
+      ${Heading({ tag: "h2", children: coop.title })}
+
       <div class="reel" tabindex="0" style="--col: auto">
         ${coop.logos.map(Logo)}${coop.logos.map(Logo)}
       </div>

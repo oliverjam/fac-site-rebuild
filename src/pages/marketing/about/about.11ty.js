@@ -2,6 +2,7 @@ const Markdown = require("markdown-it");
 const md = new Markdown();
 
 const html = require("../../../html");
+const Heading = require("../../../_includes/components/heading");
 
 exports.data = {
   tags: ["nav"],
@@ -19,7 +20,7 @@ exports.render = data => {
     <hr class="divider" />
 
     <section class="stack5">
-      <h2>${faqSection.title}</h2>
+      ${Heading({ tag: "h2", children: faqSection.title })}
       <ul class="grid cycle-colors">
         ${faqSection.faqs.map(Question)}
       </ul>
@@ -37,8 +38,7 @@ exports.render = data => {
 function Question({ title, body }) {
   return html`
     <li class="stack top-stripe">
-      <h3>${title}</h3>
-      ${md.render(body)}
+      ${Heading({ tag: "h3", children: title })} ${md.render(body)}
     </li>
   `;
 }

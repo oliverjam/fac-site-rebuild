@@ -2,6 +2,7 @@ const Markdown = require("markdown-it");
 const md = new Markdown();
 
 const html = require("../../../html");
+const Heading = require("../../../_includes/components/heading");
 
 exports.data = {
   permalink: "/tech-for-better/",
@@ -31,29 +32,28 @@ exports.render = data => {
     </div>
 
     <section class="stack4">
-      <h2>${apply.title}</h2>
+      ${Heading({ tag: "h2", children: apply.title })}
       <ol class="grid steps cycle-colors" style="--min-width: 20rem">
         ${apply.steps.map(Step)}
       </ol>
     </section>
 
     <section class="stack4">
-      <h2>${faqSection.title}</h2>
+      ${Heading({ tag: "h2", children: faqSection.title })}
       <ul class="grid cycle-colors">
         ${faqSection.faqs.map(Info)}
       </ul>
     </section>
 
     <section class="stack4">
-      <h2>${caseStudies.title}</h2>
+      ${Heading({ tag: "h2", children: caseStudies.title })}
       <ul class="stack">
         ${caseStudies.apps.map(App)}
       </ul>
     </section>
 
     <section class="stack4">
-      <h2>${about.title}</h2>
-      ${md.render(about.body)}
+      ${Heading({ tag: "h2", children: about.title })} ${md.render(about.body)}
     </section>
   `;
 };
@@ -70,8 +70,7 @@ function Step({ title, body }) {
 function Info({ title, body }) {
   return html`
     <li class="stack top-stripe">
-      <h3>${title}</h3>
-      ${md.render(body)}
+      ${Heading({ tag: "h3", children: title })} ${md.render(body)}
     </li>
   `;
 }

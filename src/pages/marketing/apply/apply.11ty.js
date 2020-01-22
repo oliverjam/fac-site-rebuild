@@ -2,6 +2,7 @@ const Markdown = require("markdown-it");
 const md = new Markdown();
 
 const html = require("../../../html");
+const Heading = require("../../../_includes/components/heading");
 
 exports.data = {
   tags: ["nav"],
@@ -32,28 +33,25 @@ exports.render = data => {
     <hr class="divider" />
 
     <section class="stack5">
-      <h2>${cohortSection.title}</h2>
+      ${Heading({ tag: "h2", children: cohortSection.title })}
       <ul class="grid cycle-colors">
         ${cohortSection.cohorts.map(Cohort)}
       </ul>
     </section>
 
     <section class="stack5">
-      <h2>${apply.title}</h2>
-      <ol class="grid steps cycle-colors" style="--min-width: 20rem">
-        ${apply.steps.map(Step)}
-      </ol>
+      ${Heading({ tag: "h2", children: apply.title })}
     </section>
 
     <section class="stack5">
-      <h2>${prereqs.title}</h2>
+      ${Heading({ tag: "h2", children: prereqs.title })}
       <div class="stack">
         ${md.render(prereqs.body)}
       </div>
     </section>
 
     <section class="stack">
-      <h2>${cohortImageSection.title}</h2>
+      ${Heading({ tag: "h2", children: cohortImageSection.title })}
       <div class="reel" tabindex="0">
         ${cohortImageSection.images.map(CohortImage)}
       </div>
@@ -89,7 +87,7 @@ function formatDate(d) {
 
 function Step(s) {
   return html`
-    <li class="stack">
+    <li class="stack" style="flex: 1 0 24rem">
       <h3>${s.title}</h3>
       ${md.render(s.body)}
     </li>
