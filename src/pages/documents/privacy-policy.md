@@ -85,8 +85,7 @@ In operating our website and supplying you with our service, it may become neces
 
 We have obligations to ensure that your personal data processed by us or by our suppliers and partners operating outside the EEA is treated securely and is protected against unauthorised access, loss or destruction, unlawful processing and any processing which is inconsistent with the purposes set out in this Notice.
 
-Please get in touch for a list of the suppliers and processors we currently use, and other parties to whom we disclose your personal data. We can also send information about how these parties use your personal data, any processing they perform outside the EEA, and the safeguards that are used to protect your personal data if this happens. This information may change from time to time. Please ask us if you would like more information about the safeguards that are used to protect your personal data when it is processed outside the EEA (see Contacting Us below). By providing your personal data to us, you agree to this transfer, storing or processing.
-In addition to the purposes set out above, we may also provide your personal data to our processors who perform certain business services for us. We share your personal data with third parties who:
+Please get in touch for a list of the suppliers and processors we currently use, and other parties to whom we disclose your personal data. We can also send information about how these parties use your personal data, any processing they perform outside the EEA, and the safeguards that are used to protect your personal data if this happens. This information may change from time to time. Please ask us if you would like more information about the safeguards that are used to protect your personal data when it is processed outside the EEA (see Contacting Us below). By providing your personal data to us, you agree to this transfer, storing or processing. In addition to the purposes set out above, we may also provide your personal data to our processors who perform certain business services for us. We share your personal data with third parties who:
 
 * Send emails on our behalf
 * Facilitate requested communication
@@ -101,7 +100,7 @@ We will not disclose your personal information to any other party other than in 
 * To further fraud protection and reduce the risk of fraud
 * It is important that the personal information we hold about you is accurate and current. Please get in touch with us if your personal information changes during your relationship with us.
 
-\## Legal basis for processing your personal data
+## Legal basis for processing your personal data
 
 In most cases, it is in our legitimate interests to collect and use the personal data referred to above (see “Information We Collect” above) so that we can provide you with a service and better understand our customer base so that we can improve our services and marketing activities (which could also benefit you).
 
