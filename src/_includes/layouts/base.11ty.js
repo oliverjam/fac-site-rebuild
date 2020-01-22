@@ -103,7 +103,7 @@ function Footer({ nextPage, site }) {
             </div>
           `}
         <div class="site-info stack2">
-          <div class="contact">
+          <div class="contact" id="contact">
             <span>${site.email}</span>
             <span class="contact-divider">|</span>
             <address>${site.address}</address>
