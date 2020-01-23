@@ -28,7 +28,7 @@ exports.render = data => {
     </section>
 
     <section class="full-width stripes">
-      <div class="reel" style="--gap: var(--space5); --col: 28rem" tabindex="0">
+      <div class="reel" style="--gap: var(--space5); --col: 30rem" tabindex="0">
         ${teamSection.team.map(Testimonial)}
       </div>
     </section>
@@ -45,7 +45,7 @@ function Question({ title, body }) {
 
 function Testimonial({ name, role, image, href }) {
   return html`
-  <figure class="testimonial">
+  <figure class="testimonial staff">
     <figcaption>
       <h3>${name}</h3>
       <div>${role}</h3>
