@@ -5,77 +5,62 @@
     "title": "Course dates",
     "cohorts": [
       {
-        "name": "Winter 2019",
-        "dates": [
-          {
-            "title": "Expression of interest",
-            "open": "2019-05-01T15:30:13.631Z",
-            "close": "2019-07-01T15:30:13.667Z"
-          },
-          {
-            "title": "Application window",
-            "open": "2019-08-01T15:30:46.216Z",
-            "close": "2019-08-31T15:30:46.250Z"
-          },
-          {
-            "title": "Interview dates",
-            "open": "2019-09-09T15:45:22.886Z",
-            "close": "2019-09-14T15:45:22.934Z"
-          },
-          {
-            "title": "Course dates",
-            "open": "2019-10-28T16:46:04.480Z",
-            "close": "2020-03-06T16:46:04.550Z"
-          }
-        ]
-      },
-      {
-        "name": "Spring 2019",
-        "dates": [
-          {
-            "title": "Expression of interest",
-            "open": "2019-09-01T15:30:13.631Z",
-            "close": "2019-10-01T15:30:13.667Z"
-          },
-          {
-            "title": "Application window",
-            "open": "2019-08-01T15:30:46.216Z",
-            "close": "2019-08-31T15:30:46.250Z"
-          },
-          {
-            "title": "Interview dates",
-            "open": "2019-09-09T15:45:22.886Z",
-            "close": "2019-09-14T15:45:22.934Z"
-          },
-          {
-            "title": "Course dates",
-            "open": "2019-10-28T16:46:04.480Z",
-            "close": "2020-03-06T16:46:04.550Z"
-          }
-        ]
-      },
-      {
         "name": "Summer 2020",
         "dates": [
           {
-            "title": "Expression of interest",
-            "open": "2019-09-01T15:30:13.631Z",
-            "close": "2019-10-01T15:30:13.667Z"
-          },
-          {
             "title": "Application window",
-            "open": "2019-08-01T15:30:46.216Z",
-            "close": "2019-08-31T15:30:46.250Z"
+            "open": "2020-04-01T00:00:00.000Z",
+            "close": "2020-04-30T00:00:00.000Z"
           },
           {
             "title": "Interview dates",
-            "open": "2019-09-09T15:45:22.886Z",
-            "close": "2019-09-14T15:45:22.934Z"
+            "open": "2020-05-04T00:00:00.000Z",
+            "close": "2020-05-15T00:00:00.000Z"
           },
           {
             "title": "Course dates",
-            "open": "2019-10-28T16:46:04.480Z",
-            "close": "2020-03-06T16:46:04.550Z"
+            "open": "2020-06-29T00:00:00.000Z",
+            "close": "2020-10-30T00:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "name": "Winter 2020",
+        "dates": [
+          {
+            "title": "Application window",
+            "open": "2020-08-01T00:00:00.000Z",
+            "close": "2020-08-31T00:00:00.000Z"
+          },
+          {
+            "title": "Interview dates",
+            "open": "2020-09-07T00:00:00.000Z",
+            "close": "2020-09-11T00:00:00.000Z"
+          },
+          {
+            "title": "Course dates",
+            "open": "2020-10-26T00:00:00.000Z",
+            "close": "2021-03-06T00:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "name": "Spring 2021",
+        "dates": [
+          {
+            "title": "Application window",
+            "open": "2020-12-01T00:00:00.000Z",
+            "close": "2021-01-02T00:00:00.000Z"
+          },
+          {
+            "title": "Interview dates",
+            "open": "2021-01-04T00:00:00.000Z",
+            "close": "2021-01-15T00:00:00.000Z"
+          },
+          {
+            "title": "Course dates",
+            "open": "2021-03-01T00:00:00.000Z",
+            "close": "2021-04-02T00:00:00.000Z"
           }
         ]
       }
