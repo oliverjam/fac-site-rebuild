@@ -425,6 +425,7 @@ main > .stripes:last-child {
 .reel {
   --gap: var(--space4);
   --col-xs: 100%; /* sets the default width of children */
+  --col: 24rem;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -435,7 +436,6 @@ main > .stripes:last-child {
   flex: 1 0 var(--col-xs);
 
   @media (--viewport-xs) {
-    --col: 24rem;
     flex: 1 0 var(--col);
   }
 }
