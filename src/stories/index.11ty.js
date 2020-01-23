@@ -102,7 +102,7 @@ function placeholder(title) {
 function formatDate(d) {
   return new Date(d).toLocaleDateString("en-GB", {
     year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
   });
 }
