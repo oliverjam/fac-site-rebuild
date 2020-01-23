@@ -18,7 +18,7 @@ If you wish to make a complaint in London, please first review the [complaints p
 
 ## The Quick Version
 
-Our community is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of community members in any form. Sexual language, imagery or innuendo is not appropriate for any community event, including talks, workshops, parties, Gitter, Twitter and other online media or channels. Participants violating these rules may be sanctioned or expelled from the event and any future events, as well as the from the community itself, at the discretion of [the organisers, Founders and Coders](http://www.foundersandcoders.com).
+Our community is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of community members in any form. Sexual language, imagery or innuendo is not appropriate for any community event, including talks, workshops, parties, Slack, Twitter and other online media or channels. Participants violating these rules may be sanctioned or expelled from the event and any future events, as well as the from the community itself, at the discretion of [the organisers, Founders and Coders](http://www.foundersandcoders.com).
 
 ## The Long Version
 
