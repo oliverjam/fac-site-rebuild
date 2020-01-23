@@ -126,6 +126,7 @@ function Logo() {
         viewBox="-1 0 301 141"
         fill="none"
         width="140"
+        class="site-logo"
         stroke-width="1"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -180,7 +181,7 @@ function Logo() {
           length-adjust="spacingAndGlyphs"
           stroke="none"
           fill="black"
-          style="font-size: 24px; text-transform: uppercase;"
+          style="font-size: 26px; text-transform: uppercase;"
         >
           Founders and coders
         </text>
