@@ -33,7 +33,7 @@ exports.render = data => {
         >
           ${quotes.map(Quote)}
         </div>
-        <div class="reel" tabindex="0" style="--col: auto">
+        <div class="reel" tabindex="0" style="--col-xs: auto">
           ${partners.map(Logo)}
         </div>
       </div>

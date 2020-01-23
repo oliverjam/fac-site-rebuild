@@ -30,7 +30,7 @@ exports.render = data => {
     <section class="stack">
       ${Heading({ tag: "h2", children: coop.title })}
 
-      <div class="reel" tabindex="0" style="--col: auto">
+      <div class="reel" tabindex="0" style="--col-xs: auto">
         ${coop.logos.map(Logo)}${coop.logos.map(Logo)}
       </div>
     </section>
