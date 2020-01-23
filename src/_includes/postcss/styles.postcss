@@ -29,7 +29,7 @@
   --black: #121212;
   --darkGray: #333;
   --gray: #878787;
-  --lightGray: hsl(0, 0%, 88%);
+  --lightGray: hsl(0, 0%, 94%);
   --white: #fff;
   --nearWhite: hsl(0, 0%, 96%);
   --green: #00be00;
@@ -393,11 +393,12 @@ h6 {
 .stripes {
   --py: var(--space3);
   --px: var(--space3);
+  --stripe: var(--muted);
   padding: var(--py) var(--px);
   background-image: repeating-linear-gradient(
     -45deg,
-    var(--muted),
-    var(--muted) 2px,
+    var(--stripe),
+    var(--stripe) 2px,
     transparent 2px,
     transparent 8px
   );
