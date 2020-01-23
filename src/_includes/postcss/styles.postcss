@@ -766,37 +766,20 @@ main > .stripes:last-child {
     width: var(--space6);
     height: 2px;
     border-top: var(--space2) double var(--primary);
+    margin-bottom: var(--space3);
   }
   @media (--viewport-m) {
     text-align: center;
 
     &::before {
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
 
-.contact {
-  margin-top: var(--space3);
-  display: grid;
-  gap: var(--space2);
-
-  & address {
-    font-style: normal;
-  }
-
-  & .contact-divider {
-    display: none;
-  }
-
-  @media (--viewport-m) {
-    grid-template-columns: max-content max-content max-content;
-    justify-content: center;
-
-    & .contact-divider {
-      display: block;
-    }
-  }
+address {
+  font-style: normal;
 }
 
 .checkbox ~ label {

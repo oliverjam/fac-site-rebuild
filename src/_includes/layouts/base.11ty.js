@@ -103,16 +103,11 @@ function Footer({ nextPage, site }) {
             </div>
           `}
         <div class="site-info stack2">
-          <div class="contact" id="contact">
-            <span>${site.email}</span>
-            <span class="contact-divider">|</span>
-            <address>${site.address}</address>
-          </div>
-          <div class="cluster">
-            <div style="justify-content: center">
-              <a href="/code-of-conduct">Code of Conduct</a>
-              <a href="/privacy-policy">Privacy Policy</a>
-            </div>
+          <div id="contact">${site.email}</div>
+          <address>${site.address}</address>
+          <div class="links">
+            <a href="/code-of-conduct">Code of Conduct</a>
+            <a href="/privacy-policy">Privacy Policy</a>
           </div>
           <div class="copyright">
             © ${new Date().getFullYear()} Founders and Coders. All rights
