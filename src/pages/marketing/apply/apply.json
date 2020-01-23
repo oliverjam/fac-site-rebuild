@@ -95,32 +95,32 @@
     "title": "Our developer community",
     "images": [
       {
-        "name": "Spring 2019",
+        "name": "London Spring 2019",
         "image": "/assets/media/FAC16.jpg"
       },
       {
-        "name": "Winter 2018",
+        "name": "London Winter 2018",
         "image": "/assets/media/FAC15.jpg"
       },
       {
-        "name": "Summer 2018",
+        "name": "London Summer 2018",
         "image": "/assets/media/FAC14.jpg"
       },
       {
-        "name": "Spring 2018",
+        "name": "London Spring 2018",
         "image": "/assets/media/FAC13.jpg"
       },
       {
-        "name": "Winter 2017",
+        "name": "Gaza Winter 2017",
         "image": "/assets/media/FACG3.png"
       },
       {
-        "name": "Spring 2017",
-        "image": "/assets/media/FAC10.jpg"
+        "name": "Nazareth Winter 2017",
+        "image": "/assets/media/FACN3.png"
       },
       {
-        "name": "Winter 2017",
-        "image": "/assets/media/FACN3.png"
+        "name": "London Spring 2017",
+        "image": "/assets/media/FAC10.jpg"
       }
     ]
   }
