@@ -457,6 +457,22 @@ main > .stripes:last-child {
   margin-left: var(--gap);
 }
 
+/* for stuff that should stack on mobile */
+.reel-xs {
+  /* Cancel flex layout for smallest viewport */
+  display: initial;
+  @media (--viewport-xs) {
+    /* back to flex row layout */
+    display: flex;
+  }
+  & > * + * {
+    /* Need to reset all the child margins */
+    margin-left: 0;
+    @media (--viewport-xs) {
+      margin-left: var(--gap);
+    }
+  }
+}
 .top-stripe::before {
   content: "";
   display: block;

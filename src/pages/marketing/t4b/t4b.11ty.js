@@ -34,7 +34,7 @@ exports.render = data => {
     <section class="stack4">
       ${Heading({ tag: "h2", children: apply.title })}
       <div class="full-width xs stripes">
-        <ol class="reel steps cycle-colors" style="--min-width: 20rem">
+        <ol class="reel reel-xs steps cycle-colors" style="--min-width: 20rem">
           ${apply.steps.map(Step)}
         </ol>
       </div>
