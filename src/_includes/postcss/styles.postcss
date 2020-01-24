@@ -436,12 +436,16 @@ main > .stripes:last-child {
 }
 
 .reel {
-  --gap: var(--space4);
-  --col-xs: 100%; /* sets the default width of children */
+  --gap: var(--space3);
+  --col-xs: 80%; /* sets the default width of children */
   --col: 24rem;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+
+  @media (--viewport-xs) {
+    --gap: var(--space4);
+  }
 }
 
 .reel > * {
@@ -687,7 +691,11 @@ main > .stripes:last-child {
 .card {
   position: relative;
   display: grid;
-  grid-template-rows: 225px 1fr;
+  grid-template-rows: 170px 1fr;
+
+  @media (--viewport-xs) {
+    grid-template-rows: 225px 1fr;
+  }
 
   & .image {
     background-color: var(--backgroundMuted);

@@ -28,7 +28,7 @@ exports.render = data => {
       <div class="stack5">
         <div
           class="reel"
-          style="--gap: var(--space5); --col: 28rem"
+          style="--gap: var(--space4); --col: 28rem"
           tabindex="0"
         >
           ${quotes.map(Quote)}
