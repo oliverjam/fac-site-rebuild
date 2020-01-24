@@ -726,8 +726,8 @@ main > .stripes:last-child {
   color: var(--background);
 
   & > * {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr auto;
     max-width: 60rem;
     margin: 0 auto;
     padding: var(--space4);
@@ -743,7 +743,6 @@ main > .stripes:last-child {
 }
 
 .next-page {
-  flex: 1;
   display: grid;
   align-content: center;
 }
