@@ -49,8 +49,6 @@
   --muted: var(--lightGray);
   --border: var(--gray);
 
-  --page-width: 66rem;
-
   --sans: "Eesti", system-ui, -apple-system, BlinkMacSystemFont, Helvetica,
     Arial, sans-serif;
 }
@@ -213,16 +211,37 @@ a {
 
 main {
   width: 100%;
-  max-width: var(--page-width);
+  max-width: 66rem;
   justify-self: center;
   padding: var(--space3);
+  --spacing: var(--space4);
+
+  & > * + * {
+    /* All children with a preceding sibling get margin-top */
+    margin-top: var(--spacing);
+  }
+
+  &.document {
+    /* Document pages (e.g privacy policy) are narrower */
+    max-width: 50rem;
+  }
 
   @media (--viewport-xs) {
     padding: var(--space4);
+
+    /* Marketing pages get more space on larger screens */
+    &.marketing {
+      --spacing: var(--space5);
+    }
   }
 
   @media (--viewport-m) {
     padding: var(--space5) var(--space4);
+
+    /* Marketing pages get more space on larger screens */
+    &.marketing {
+      --spacing: var(--space7);
+    }
   }
 }
 

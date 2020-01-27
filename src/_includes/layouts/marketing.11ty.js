@@ -6,6 +6,6 @@ exports.data = {
 
 exports.render = data => {
   return html`
-    <main class="stack7">${data.content}</main>
+    <main class="marketing">${data.content}</main>
   `;
 };

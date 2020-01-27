@@ -6,7 +6,7 @@ exports.data = {
 
 exports.render = data => {
   return html`
-    <main class="stack4" style="--page-width: 50rem">
+    <main class="document">
       <h1>${data.title}</h1>
       ${data.content}
     </main>
