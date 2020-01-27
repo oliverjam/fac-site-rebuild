@@ -6,7 +6,7 @@ const html = require("../../html");
 exports.data = {
   permalink: false,
   layout: "layouts/base",
-  tags: ["nav"],
+  // tags: ["nav"],
   navLabel: "Events",
   order: 5,
 };
