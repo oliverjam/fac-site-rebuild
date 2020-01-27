@@ -5,8 +5,11 @@ const slugify = require("@sindresorhus/slugify");
 module.exports = config => {
   // Netlify CMS expects to be served from /admin
   config.addPassthroughCopy({ "src/pages/cms": "/admin" });
-  // deploy everything in assets untouched
-  config.addPassthroughCopy("src/assets");
+  // deploy fonts and media untouched
+  config.addPassthroughCopy("src/assets/fonts");
+  config.addPassthroughCopy("src/assets/media");
+  // deploy favicons at the root for best browser support
+  config.addPassthroughCopy({ "src/assets/icons": "/" });
 
   // needed to merge tags from specific files with directory-level data
   config.setDataDeepMerge(true);
