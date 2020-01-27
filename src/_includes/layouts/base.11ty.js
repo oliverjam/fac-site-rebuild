@@ -10,6 +10,8 @@ module.exports = data => {
     .map(n => ({ label: n.data.navLabel, url: n.url, title: n.data.title }));
 
   const nextPage = pages[(data.order + 1) % pages.length];
+
+  const description = data.intro ? data.intro.body || data.intro : data.excerpt;
   return html`
     <!DOCTYPE html>
     <html lang="en">
@@ -18,6 +20,7 @@ module.exports = data => {
         <title>
           ${data.title || "Coding Bootcamp in London"} - ${data.site.title}
         </title>
+        <meta name="description" content="${description}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="/assets/css/styles.css" />
