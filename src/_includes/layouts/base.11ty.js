@@ -11,6 +11,7 @@ module.exports = data => {
 
   const nextPage = pages[(data.order + 1) % pages.length];
 
+  const pageTitle = `${data.title} - ${data.site.title}`;
   const description = data.intro ? data.intro.body || data.intro : data.excerpt;
   return html`
     <!DOCTYPE html>
@@ -45,6 +46,21 @@ module.exports = data => {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0805ec" />
         <meta name="theme-color" content="#121212" />
+
+        <meta property="og:title" content="${pageTitle}" />
+        <meta property="og:description" content="${description}" />
+        <meta
+          property="og:image"
+          content="/assets/og/${data.page.fileSlug}.png"
+        />
+        <meta
+          name="twitter:image"
+          content="/assets/og/${data.page.fileSlug}.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body>
         ${Header({ pages, currentUrl: data.page.url })}${data.content}
